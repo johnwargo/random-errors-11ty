@@ -2,6 +2,8 @@
 
 The Eleventy version of the static web site for [randomerrors.dev](https://randomerrors.dev).  This is a work in progress.
 
+Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
+
 + Domain: [Google Domains](https://domains.google)
 + Framework: [Eleventy](https://www.11ty.dev/)
 + Source: [Github](https://github.com/johnwargo/random-errors-11ty)
@@ -12,12 +14,12 @@ The Eleventy version of the static web site for [randomerrors.dev](https://rando
 
 * [ ] Select theme and implement
 * [ ] Categories menu
+* [ ] Add Buy me a coffee
+* [ ] Add Favicons
 * [ ] Publish site to Netlify
 * [ ] Connect site to jmwtest.com during development
-* [ ] Add Favicons
 * [ ] Add Google Analytics
 * [ ] Add Site Search (Algolia)
-* [ ] Add Buy me a coffee
 
 ## Google Analytics
 
