@@ -1,3 +1,151 @@
 ---
-siteTitle: Random Errors
+siteTitle: Random Development Errors
 ---
+
+{% assign categories = collections.categories | sort %}
+
+<!DOCTYPE HTML>
+<!--
+TXT by Pixelarity
+pixelarity.com | hello@pixelarity.com
+License: pixelarity.com/license
+--><html>
+  <head>
+    <title>{{ siteTitle }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/main.css" />
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+
+      <header id="header">
+        <div class="logo container">
+          <div>
+            <h1>
+              <a href="{{ "/" | htmlBaseUrl }}index.html" id="logo">{{ siteTitle }}</a>
+            </h1>
+            <p>
+              by Pixelarity</p>
+          </div>
+        </div>
+      </header>
+
+      <nav id="nav">
+        <ul>
+          <li>
+            <a href="{{ "/" | htmlBaseUrl }}">Home</a>
+          </li>
+          <li>
+            <span class="opener">Categories</span>
+            <ul>
+              {% for category in categories %}
+                <li>
+                  <a href="{{ "/" | htmlBaseUrl }}category/{{ category | slugify }}">{{ category | capitalize }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+          <li>
+            <a href="{{ "/" | htmlBaseUrl }}about">About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <section id="main">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="content">
+                <article class="box page-content">
+                  <header>
+                    <h2>{{ title }}</h2>
+                  </header>
+                  {{ content }}
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="container">
+          <div class="row gtr-200">
+            <div class="col-12">
+
+              <!-- About -->
+              <section>
+                <h2 class="major">
+                  <span>Lectus eget nullam?</span>
+                </h2>
+                <p>
+                  Nibh ut elit, sem aliquet quam adipiscing diam accumsan faucibus sollicitudin sed Condimentum. Cras pharetra magna pellentesque Commodo Condimentum euismod at ante eget ac non et pellentesque varius blandit eu penatibus at pellentesque, urna mi enim in arcu et aenean col sit pellentesque convallis at id
+                </p>
+              </section>
+
+            </div>
+            <div class="col-12">
+
+              <!-- Contact -->
+              <section>
+                <h2 class="major">
+                  <span>Get in touch</span>
+                </h2>
+                <ul class="contact">
+                  <li>
+                    <a class="icon brands fa-facebook-f" href="#">
+                      <span class="label">Facebook</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="icon brands fa-twitter" href="#">
+                      <span class="label">Twitter</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="icon brands fa-instagram" href="#">
+                      <span class="label">Instagram</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="icon brands fa-dribbble" href="#">
+                      <span class="label">Dribbble</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="icon brands fa-linkedin-in" href="#">
+                      <span class="label">LinkedIn</span>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+
+            </div>
+          </div>
+
+          <!-- Copyright -->
+          <div id="copyright">
+            <ul class="menu">
+              <li>&copy; John M. Wargo. All rights reserved</li>
+            </ul>
+          </div>
+
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ "/" | htmlBaseUrl }}assets/js/jquery.min.js"></script>
+    <script src="{{ "/" | htmlBaseUrl }}assets/js/jquery.dropotron.min.js"></script>
+    <script src="{{ "/" | htmlBaseUrl }}assets/js/jquery.scrolly.min.js"></script>
+    <script src="{{ "/" | htmlBaseUrl }}assets/js/browser.min.js"></script>
+    <script src="{{ "/" | htmlBaseUrl }}assets/js/breakpoints.min.js"></script>
+    <script src="{{ "/" | htmlBaseUrl }}assets/js/util.js"></script>
+    <script src="{{ "/" | htmlBaseUrl }}assets/js/main.js"></script>
+
+  </body>
+</html>

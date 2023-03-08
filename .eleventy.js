@@ -48,17 +48,17 @@ module.exports = eleventyConfig => {
     return today.getFullYear();
   }
 
-	// eleventyConfig.addPassthroughCopy("src/assets/css/*");	
-	// eleventyConfig.addPassthroughCopy("src/assets/js/*");
-	// eleventyConfig.addPassthroughCopy("src/assets/sass/*");
-	// eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
+	eleventyConfig.addPassthroughCopy("src/assets/css/*");	
+	eleventyConfig.addPassthroughCopy("src/assets/js/*");
+	eleventyConfig.addPassthroughCopy("src/assets/sass/*");
+	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
 
 	eleventyConfig.addPassthroughCopy("src/images/*");	
-	eleventyConfig.addPassthroughCopy("src/images/2019/*.jpg");	
-	eleventyConfig.addPassthroughCopy("src/images/2020/*.jpg");	
-	eleventyConfig.addPassthroughCopy("src/images/2021/*.jpg");	
-	eleventyConfig.addPassthroughCopy("src/images/2022/*.jpg");	
-	eleventyConfig.addPassthroughCopy("src/images/2023/*.jpg");	
+	// eleventyConfig.addPassthroughCopy("src/images/2019/*.jpg");	
+	// eleventyConfig.addPassthroughCopy("src/images/2020/*.jpg");	
+	// eleventyConfig.addPassthroughCopy("src/images/2021/*.jpg");	
+	// eleventyConfig.addPassthroughCopy("src/images/2022/*.jpg");	
+	// eleventyConfig.addPassthroughCopy("src/images/2023/*.jpg");	
 
 	return {
 		dir: {
