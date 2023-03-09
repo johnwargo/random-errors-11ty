@@ -15,7 +15,7 @@ Looking around the Internet, I found the following article that explained the is
 
 My app had the following object defined:
 
-```JavaScript
+```javascript
 export class Config {
 
   this.ACCESS_TOKEN_KEY = 'accessToken';
@@ -38,7 +38,7 @@ It's a web app that talks to a [Particle Photon](https://particle.io) project, s
 
 Anyway, the fix was to update the code as shown below and everything seems to work.
 
-```JavaScript
+```javascript
 export class Config {
   
   constructor() {

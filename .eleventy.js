@@ -1,10 +1,12 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = eleventyConfig => {
 
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginRss);
+	eleventyConfig.addPlugin(syntaxHighlight);
 
 	// From ray camden's blog, first paragraph as excerpt
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
