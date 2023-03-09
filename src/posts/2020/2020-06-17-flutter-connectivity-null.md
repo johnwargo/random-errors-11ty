@@ -1,9 +1,8 @@
 ---
-  layout: post
-  title: Flutter Connectivity Android Null Results
-  tags: [Android]
-  categories: [Flutter Development]
-  comments: true
+tag: post
+title: Flutter Connectivity Android Null Results
+categories: [Flutter Development]
+date: 2020-06-17
 ---
 
 While building a Flutter application that needed to access information about the system's Wi-Fi network, I encountered the [connectivity](https://pub.dev/packages/connectivity) package. It looked like what I needed, and I quickly added it to my app. In testing with my application, I had connectivity working correctly, but then suddenly it stopped working. I noticed this when I switched from testing on an Android device Emulator; the app would 'run' but returned `null` for Wi-Fi network name and BSSID.

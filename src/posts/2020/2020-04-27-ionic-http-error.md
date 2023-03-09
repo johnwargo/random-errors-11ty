@@ -1,9 +1,8 @@
 ---
-  layout: post
-  title: Ionic HTTP Failure Unknown Error
-  tags: 
-  categories: [Ionic Framework]
-  comments: true
+tag: post
+title: Ionic HTTP Failure Unknown Error
+categories: [Ionic Framework]
+date: 2020-04-27
 ---
 
 I'm working on a simple Ionic app I built as an example to publish publicly; it's a simple weather app that uses the OpenWeather API to display current conditions and forecast. The app runs great in the browser, but when you execute it on an Android Device, when the app connects to the Weather API, it immediately returns the following error:

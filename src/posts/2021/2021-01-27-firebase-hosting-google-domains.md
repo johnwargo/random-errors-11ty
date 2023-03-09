@@ -1,9 +1,8 @@
 ---
-  layout: post
-  title: Google Domains "Record Already in Use"
-  tags: [Firebase, Google Domains]
-  categories: [Web Hosting]
-  comments: true
+tag: post
+title: Google Domains "Record Already in Use"
+categories: [Web Hosting]
+date: 2021-01-27
 ---
 
 I'm working a lot lately in Firebase and when trying to setup Firebase Hosting for one of my domains, Firebase showed me the following dialog:

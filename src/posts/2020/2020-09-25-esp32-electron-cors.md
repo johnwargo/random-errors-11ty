@@ -1,9 +1,8 @@
 ---
-  layout: post
-  title: ESP32 Electron and CORS errors
-  tags: [Electron, ESP32, CORS, Ionic]
-  categories: [IoT]
-  comments: true
+tag: post
+title: ESP32 Electron and CORS errors
+categories: [IoT]
+date: 2020-09-25
 ---
 
 I'm working on a project that uses an ESP32 device with an Ionic Capacitor Electron app. The ESP32 device runs a web server the Electron app talks to and with the latest version of Capacitor Electron, when the app makes an API call to the ESP32 device, it completes successfully, but Electron fires the following error:

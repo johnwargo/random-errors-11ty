@@ -1,9 +1,8 @@
 ---
-  layout: post
-  title: Ionic Capacitor Electron Window Configuration
-  tags: [Electron, Capacitor]
-  categories: [Ionic Framework]
-  comments: true
+tag: post
+title: Ionic Capacitor Electron Window Configuration
+categories: [Ionic Framework]
+date: 2020-09-24
 ---
 
 I'm working on a new app for desktop PCs; since I want to deploy to Windows and macOS, I decided not to go the native route, but instead look for an alternative approach. Since I've done so much Ionic development lately, and the app I want to deploy to desktops already exists in Ionic, I decided to use [Ionic](https://ionicframework.com/), [Capacitor](https://capacitorjs.com/) and [Capacitor-Community Electron](https://capacitor-community-electron-docs-site.vercel.app/) for my app.

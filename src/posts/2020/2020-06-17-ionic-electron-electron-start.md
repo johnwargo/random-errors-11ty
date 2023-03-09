@@ -1,9 +1,8 @@
 ---
-  layout: post
-  title: Ionic Electron Command Failed npm run electron:start 
-  tags: [Electron, Capacitor]
-  categories: [Ionic Framework]
-  comments: true
+tag: post
+title: Ionic Electron Command Failed npm run electron:start 
+categories: [Ionic Framework]
+date: 2020-06-07  
 ---
 
 While testing an Ionic Electron app the other day, I opened a terminal window, navigated to the Ionic project folder, then executed the following command:

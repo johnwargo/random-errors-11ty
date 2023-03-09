@@ -1,9 +1,8 @@
 ---
-  layout: post
-  title: Adafruit Feather Huzzah32 with the ePaper FeatherWing
-  tags: [Adafruit, Feather, Arduino]
-  categories: [IoT]
-  comments: true
+tag: post
+title: Adafruit Feather Huzzah32 with the ePaper FeatherWing
+categories: [IoT]
+date: 2021-08-07
 ---
 
 I'm a huge fan of [Adafruit's](https://www.adafruit.com/) projects, especially the Feather series of microcontrollers and associated FeatherWings (add-on boards). The format is so popular that [Particle](https://www.particle.io/) (another one of my favorite hardware companies) even adopted the footprint for their latest hardware.

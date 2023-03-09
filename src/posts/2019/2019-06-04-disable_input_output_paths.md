@@ -1,9 +1,8 @@
 ---
-  layout: post
-  title: Ionic `disable_input_output_paths`
-  tags: 
-  categories: [Ionic Framework]
-  comments: true
+tag: post
+title: Ionic `disable_input_output_paths`
+date: 2019-06-04
+categories: [Ionic Framework]
 ---
 
 I was testing an Ionic application in Xcode yesterday when I received the following error message during the Build process:

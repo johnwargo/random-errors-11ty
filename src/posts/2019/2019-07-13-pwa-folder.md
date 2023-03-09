@@ -1,11 +1,9 @@
 ---
-layout: post
+tag: post
 title:  "Install PWA from Folder"
 description: How to build a webmanifest file for a PWA served from a folder
-date:   2019-06-29 08:40:00 -0400
-tags: 
+date: 2019-06-29
 categories: [Web Development]
-comments: true
 ---
 
 I'm working on a project which includes a web app with a service worker and a webmanifest file (a progressive Web App (PWA)). For this particular app, I wanted the app hosted from a subfolder on a public domain I have running. By tweaking the `scope` and `start_url` properties in the project's `.webmanifest` file, I was in some cases not able to install it and, in other cases, could install it, but the app wouldn't open to the right page when I double-clicked the installed app icon.

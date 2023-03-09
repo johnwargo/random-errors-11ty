@@ -1,9 +1,8 @@
 ---
-  layout: post
-  title: App Script Date Picker UTC
-  tags: 
-  categories: [Google App Script]
-  comments: true
+tag: post
+title: App Script Date Picker UTC
+categories: [Google App Script]
+date: 2021-01-12
 ---
 
 I'm working on a project where I needed an Add-on to Google Calendar. Google Developers recently sent me an email with details about App Script, and after a little research I knew it would solve my problem. It took me a really long time to get to the point where it worked - longer than I expected and, I think, a direct result of the fact the the App Script docs omit a lot of concrete examples I needed to get started.

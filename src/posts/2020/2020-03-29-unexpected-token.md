@@ -1,9 +1,8 @@
 ---
-  layout: post
-  title: Unexpected token '='
-  tags: [iOS, macOS]
-  categories: [Ionic Framework]
-  comments: true
+tag: post
+title: Unexpected token '='
+categories: [Ionic Framework]
+date: 2020-03-29
 ---
 
 In a web app I've been working on, when I ran the application on an iOS device or Safari on macOS, A configuration panel built into the application didn't do anything when I tapped on the Gear icon to open it. When I looked at the console, I saw the following error:

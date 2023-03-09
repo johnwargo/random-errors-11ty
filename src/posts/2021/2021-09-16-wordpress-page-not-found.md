@@ -1,9 +1,8 @@
 ---
-  layout: post
-  title: WordPress Category Menu Page Not Found
-  tags: [Wordpress]
-  categories: [CMS]
-  comments: true
+tag: post
+title: WordPress Category Menu Page Not Found
+categories: [CMS]
+date: 2021-09-16
 ---
 
 I recently updated one of my WordPress Sites and noticed that my site's News menu didn't display any articles. I poked around at my site's posts and didn't notice anything wrong with them, they were all set with the right category.
