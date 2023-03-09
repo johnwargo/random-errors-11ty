@@ -1,5 +1,5 @@
 ---
-tag: post
+tags: post
 title: ESP32 Electron and CORS errors
 categories: [IoT]
 date: 2020-09-25

@@ -1,5 +1,5 @@
 ---
-tag: post
+tags: post
 title: Ionic Capacitor Electron Window Configuration
 categories: [Ionic Framework]
 date: 2020-09-24

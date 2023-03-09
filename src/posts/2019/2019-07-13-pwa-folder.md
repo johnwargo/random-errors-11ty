@@ -1,7 +1,6 @@
 ---
-tag: post
-title:  "Install PWA from Folder"
-description: How to build a webmanifest file for a PWA served from a folder
+tags: post
+title: Install PWA from Folder
 date: 2019-06-29
 categories: [Web Development]
 ---

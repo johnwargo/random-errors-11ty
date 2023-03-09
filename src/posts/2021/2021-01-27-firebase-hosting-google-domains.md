@@ -1,5 +1,5 @@
 ---
-tag: post
+tags: post
 title: Google Domains "Record Already in Use"
 categories: [Web Hosting]
 date: 2021-01-27

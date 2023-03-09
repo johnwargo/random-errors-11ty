@@ -1,7 +1,6 @@
 ---
-tag: post
-title:  "Installation failed with message Invalid File"
-description: Describes an error I encountered when installing an Ionic 4 application on an Android device.
+tags: post
+title: Installation failed with message Invalid File
 date: 2019-06-29
 categories: [Ionic Framework]
 ---

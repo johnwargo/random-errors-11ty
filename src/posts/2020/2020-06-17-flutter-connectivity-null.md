@@ -1,5 +1,5 @@
 ---
-tag: post
+tags: post
 title: Flutter Connectivity Android Null Results
 categories: [Flutter Development]
 date: 2020-06-17

@@ -1,8 +1,8 @@
 ---
-tag: post
+tags: post
 title: Google Domains Subdomain Configuration
-tags: [Firebase, Google Domains]
 categories: [Web Hosting]
+date: 2021-01-27
 ---
 
 I'm working a lot lately in Firebase, and when trying to setup Firebase Hosting for one of my domains - I wrote about other issues in [an earlier post]({{site.baseurl}}/2021/01/27/firebase-hosting-google-domains). In this case, I want to setup a subdomain (for example: subname.mysite.com), Firebase showed me the following dialog:

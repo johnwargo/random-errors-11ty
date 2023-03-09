@@ -1,5 +1,5 @@
 ---
-tag: post
+tags: post
 title: App Script Date Picker UTC
 categories: [Google App Script]
 date: 2021-01-12

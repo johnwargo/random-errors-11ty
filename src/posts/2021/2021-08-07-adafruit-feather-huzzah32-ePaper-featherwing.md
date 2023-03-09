@@ -1,5 +1,5 @@
 ---
-tag: post
+tags: post
 title: Adafruit Feather Huzzah32 with the ePaper FeatherWing
 categories: [IoT]
 date: 2021-08-07

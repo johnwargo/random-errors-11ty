@@ -1,5 +1,5 @@
 ---
-tag: post
+tags: post
 title: Unexpected token '='
 categories: [Ionic Framework]
 date: 2020-03-29

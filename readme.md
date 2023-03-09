@@ -14,7 +14,8 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 
 * [ ] Select theme and implement
 * [ ] Categories menu
-* [ ] Contact form at 
+* [ ] Add Description field to front matter
+* [ ] Contact form at https://formspree.io/
 * [ ] Add Buy me a coffee
 * [ ] Add Favicons
 * [ ] Publish site to Netlify

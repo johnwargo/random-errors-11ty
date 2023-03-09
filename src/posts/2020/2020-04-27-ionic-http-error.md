@@ -1,5 +1,5 @@
 ---
-tag: post
+tags: post
 title: Ionic HTTP Failure Unknown Error
 categories: [Ionic Framework]
 date: 2020-04-27

@@ -1,5 +1,5 @@
 ---
-tag: post
+tags: post
 title: WordPress Category Menu Page Not Found
 categories: [CMS]
 date: 2021-09-16

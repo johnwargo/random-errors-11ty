@@ -1,5 +1,5 @@
 ---
-tag: post
+tags: post
 title: Ionic "Pipe not found"
 categories: [Ionic Framework]
 date: 2021-02-13

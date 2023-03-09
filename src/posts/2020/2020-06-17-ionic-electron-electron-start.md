@@ -1,5 +1,5 @@
 ---
-tag: post
+tags: post
 title: Ionic Electron Command Failed npm run electron:start 
 categories: [Ionic Framework]
 date: 2020-06-07  
