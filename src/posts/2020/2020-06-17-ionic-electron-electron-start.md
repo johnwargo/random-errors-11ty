@@ -2,18 +2,18 @@
 tags: post
 title: Ionic Electron Command Failed npm run electron:start 
 categories: [Ionic Framework]
-date: 2020-06-07  
+date: 2020-06-17  
 ---
 
 While testing an Ionic Electron app the other day, I opened a terminal window, navigated to the Ionic project folder, then executed the following command:
 
-```shell
+``` shell
 npx cap open electron
 ```
 
 `npm` whirled and chunked for a little while, then displayed the following error:
 
-```text
+``` text
 [error] Error: Command failed: npm run electron:start
 'electron' is not recognized as an internal or external command,
 operable program or batch file.
@@ -41,7 +41,7 @@ npm ERR!     C:\Users\user\AppData\Roaming\npm-cache\_logs\2020-06-17T20_53_46_9
 
 This error surprised me, because I assumed the Electron project was configured correctly, but apparently not. I fixed this by executing the following commands In the terminal window:
 
-```shell
+``` shell
 cd electron
 npm install
 cd ..
