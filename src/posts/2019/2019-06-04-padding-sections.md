@@ -1,17 +1,17 @@
 ---
-tags: post
 title: Too many padding sections on bottom border
 date: 2019-06-04
 categories: [Android Development]
+tags: post
 ---
 
 While learning how to create 9-patch files for an Ionic app in Android Studio using [Creating a Dynamic/Adaptable Splash Screen for Capacitor (Android)][9-patch-link], I finished my work and kicked off a build to run the app in an emulator. During the build process, I encountered the following error:
 
-{% highlight text %}
+``` text
 Android resource compilation failed
 error: too many padding sections on bottom border.
 D:\dev\projects\path-to-project\android\app\src\main\res\drawable-xxhdpi\splash.9.png: error: file failed to compile.
-{% endhighlight %}
+```
 
 When I looked at the file in Android Studio, everything looked exactly as expected:
 

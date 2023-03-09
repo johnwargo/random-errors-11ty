@@ -23,18 +23,18 @@ It took me a while, but I finally figured it out. In the W3C [Web App Manifest](
 
 So, with that in mind, I made some adjustments. With the app hosted at the root of the domain, I used the following settings in my project's web app manifest file:
 
-{% highlight json %}
- "start_url": "/index.html?utm_source=homescreen",
-{% endhighlight %}
+``` json
+"start_url": "/index.html?utm_source=homescreen",
+```
 
 I had to specify the `index.html` file in the `start_url` property, the installed app wouldn't launch correctly until I did this.
 
 When hosting the PWA in a folder on my server, I did the following:
 
-{% highlight json %}
-  "start_url": "/myapp/index.html?utm_source=homescreen",
-  "scope": "/myapp/",
-{% endhighlight %}
+``` json
+"start_url": "/myapp/index.html?utm_source=homescreen",
+"scope": "/myapp/",
+```
 
 With that in place, it works great; you can see the final version on the (currently incomplete) [PWA Learn](https://pwalearn.com/tipcalc/) web site.
 
