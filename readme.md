@@ -12,8 +12,9 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 
 ## Tasks
 
-* [ ] Select theme and implement
-* [ ] Categories menu
+* [x] Select theme and implement
+* [x] Categories menu
+* [ ] Add number of pages and buttons to pagination
 * [ ] Add Description field to front matter
 * [ ] Contact form at https://formspree.io/
 * [ ] Add Buy me a coffee

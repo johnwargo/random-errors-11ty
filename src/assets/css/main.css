@@ -128,7 +128,7 @@ input, select, textarea {
 			border-top: solid 5px #e7eae8;
 			font-size: 1.65em;
 			text-align: center;
-			margin: 0 0 3em 0;
+			margin: 0 0 2em 0;
 			top: 0.775em;
 		}
 
@@ -181,7 +181,7 @@ input, select, textarea {
 	hr {
 		border: 0;
 		border-top: solid 2px #E7EAE8;
-		margin: 0 0 3em 0;
+		margin: 0 0 1em 0;
 	}
 
 	blockquote {
@@ -191,7 +191,7 @@ input, select, textarea {
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 3em;
+		margin-bottom: 1em;
 	}
 
 /* Section/Article */
@@ -2308,7 +2308,7 @@ input, select, textarea {
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
-		padding: 2em 0;
+		padding: 1em 0;
 		background: #fff;
 		margin: 0 auto;
 	}
@@ -2544,7 +2544,7 @@ input, select, textarea {
 		border-bottom: solid 5px #c1cac5;
 		border-top-width: 35px;
 		border-bottom-width: 10px;
-		padding: 6em 0 6em 0;
+		padding: 2em 0 2em 0;
 	}
 
 /* Sidebar + Content */

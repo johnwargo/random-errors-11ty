@@ -9,22 +9,27 @@ eleventyComputed:
   title: "Category: {{ category }}"
 ---
 
-<section id="banner">
-  <div class="content">
-    <header>
-      <h1>{{ title }}</h1>
-      <p>All of the posts for a single category, in reverse chronological order.</p>
-    </header>
+{% assign posts = collections.post | filterByCategory: category %}
 
-    {% assign posts = collections.post | filterByCategory: category %}
-    {% for post in posts reversed %}
-      <div>
-        <p>
-          <a href="{{post.url}}">{{ post.data.title }}</a>, posted {{ post.date | niceDate }}
-        </p>
-        {% excerpt post %}
+<section id="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="content">
+          <article class="box page-content">
+            <header>
+              <h2>{{ title }}</h2>
+              <p>All posts for a single category, in reverse chronological order.</p>
+            </header>
+            {% for post in posts reversed %}
+              <div>
+                <a href="{{post.url}}">{{ post.data.title }}</a>, posted {{ post.date | niceDate }}
+                {% excerpt post %}
+              </div>
+            {% endfor %}
+          </article>
+        </div>
       </div>
-    {% endfor %}
-
+    </div>
   </div>
 </section>
