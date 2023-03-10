@@ -1,17 +1,31 @@
 ---
 layout: home
 ---
-<h1>{{ title }}</h1>
-<p>
-  <strong>Posted:
-  </strong>
-  {{ date | niceDate }} |
-  <strong>Categories:</strong>
-  {% for cat in categories %}
-    <a href="/category/{{ cat | slugify }}">{{ cat }}</a>
-    {% unless forloop.last %},&nbsp;
-    {% endunless %}
-  {% endfor %}
-</p>
 
-{{ content }}
+<section id="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="content">
+          <article class="box page-content">
+            <header>
+              <h2>{{ title }}</h2>
+            </header>
+            <p>
+              <strong>Posted:
+              </strong>
+              {{ date | niceDate }} |
+              <strong>Categories:</strong>
+              {% for cat in categories %}
+                <a href="/category/{{ cat | slugify }}">{{ cat }}</a>
+                {% unless forloop.last %},&nbsp;
+                {% endunless %}
+              {% endfor %}
+            </p>
+            {{ content }}
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
