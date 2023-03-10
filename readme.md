@@ -23,9 +23,10 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 * [x] Add Buy me a coffee
 * [x] Add Favicons
 * [x] Publish site to Netlify
-* [ ] Add Google Analytics
+* [x] Add Google Analytics
 * [ ] Add Site Search (Algolia)
 * [ ] Switch DNS
+* [ ] Add Discussions (?)
 
 ## Google Analytics
 
