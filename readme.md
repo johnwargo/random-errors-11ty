@@ -9,8 +9,8 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 + Domain: [Google Domains](https://domains.google)
 + Framework: [Eleventy](https://www.11ty.dev/)
 + Source: [Github](https://github.com/johnwargo/random-errors-11ty)
-+ Hosting: [Netlify]()
-+ Backdoor Access: []()
++ Hosting: [Netlify](https://app.netlify.com/sites/random-errors/overview)
++ Backdoor Access: [Random Errors](https://random-errors.netlify.app/)
 
 ## Tasks
 
@@ -20,7 +20,7 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 * [x] Add number of pages and buttons to pagination
 * [x] Add Buy me a coffee
 * [x] Add Favicons
-* [ ] Publish site to Netlify
+* [x] Publish site to Netlify
 * [ ] Connect site to jmwtest.com during development
 * [ ] Add Google Analytics
 * [ ] Add Site Search (Algolia)
