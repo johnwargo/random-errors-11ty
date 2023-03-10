@@ -15,7 +15,7 @@ My first few attempts failed miserably. According to the [ePaper Display Feather
 
 Next, I dug through all of the relevant documentation for their ePaper displays and according to their [Adafruit eInk Display Breakouts and FeatherWings](https://learn.adafruit.com/adafruit-eink-display-breakouts/arduino-code) documentation: “If you're using a FeatherWing, try File → Examples → Adafruit_EPD → FeatherWingTest” (as shown in the following figure).
 
-![Arduino EPD Examples]({{site.baseurl}}/assets/arduino-ide-examples-adafruit-epd.png)
+![Arduino EPD Examples](/images/arduino-ide-examples-adafruit-epd.png)
 
 Unfortunately, the configuration of the sample sketch varies depending on what hardware device you're using (sigh). I poked and prodded at the documentation again trying to figure out how to configure the sketch and failed miserably.
 

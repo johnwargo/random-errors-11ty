@@ -15,7 +15,7 @@ D:\dev\projects\path-to-project\android\app\src\main\res\drawable-xxhdpi\splash.
 
 When I looked at the file in Android Studio, everything looked exactly as expected:
 
-![Android Studio 9-patch editor]({{site.baseurl}}/assets/9-patch.png)
+![Android Studio 9-patch editor](/images/9-patch.png)
 
 But when I opened the file in an image viewer, I noticed that during my fumbling around, I created extra 9-patch highlights (the 1-pixel black lines) in other parts of the 9-patch  file )right and bottom) that were causing the compiler issues. I deleted the file and recreated it and everything worked fine.
 

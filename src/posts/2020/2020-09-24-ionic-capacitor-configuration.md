@@ -11,7 +11,9 @@ In my previous attempts to build Electron apps using Ionic, I was able to tweak 
 
 For my app, I wanted to be able to set the window size for the window, but I couldn't find the instructions for how to do that. So, the purpose of this post is to document how to do it for others encountering the same problem.
 
-> You may be asking "Why not just contribute to the public docs for Capacitor Electron?" Well, I can't figure out a way to do that, so I'm writing it up here and will contribute to the docs as soon as I figure out how.
+```text
+You may be asking "Why not just contribute to the public docs for Capacitor Electron?" Well, I can't figure out a way to do that, so I'm writing it up here and will contribute to the docs as soon as I figure out how.
+```
 
 When you add the [Capacitor-community Electron](https://capacitor-community-electron-docs-site.vercel.app/) client to an Ionic app, you can tweak the Electron window configuration by opening the project's `electron/src/index.ts` file then look for the following:
 

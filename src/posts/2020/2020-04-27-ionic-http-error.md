@@ -15,7 +15,7 @@ I scratched my head for longer than I care to admit, but then recognized the pro
 
 Apparently Android no longer likes non-secure endpoints for HTTP calls.
 
-Just in case you're wondering, because I struggled to find concise examples of how to do an HTTP GET in an Ionic 4 app, here's the call that's making the call:
+Just in case you're wondering, because I struggled to find concise examples of how to do an HTTP GET in an Ionic 4 app, here's the code that's making the call:
 
 ```typescript
 import { HttpClient } from '@angular/common/http';
