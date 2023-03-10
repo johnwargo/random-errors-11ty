@@ -16,6 +16,7 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 
 * [x] Select theme and implement
 * [x] Categories menu
+* [x] Update contact options
 * [ ] Add number of pages and buttons to pagination
 * [ ] Add Description field to front matter
 * [ ] Contact form at https://formspree.io/
