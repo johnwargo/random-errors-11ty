@@ -25,6 +25,7 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 * [x] Publish site to Netlify
 * [x] Add Google Analytics
 * [x] Switch DNS
+* [ ] Add email link on the bottom (do I have an email address)
 * [ ] Add Site Search (Algolia)
 * [ ] Add Discussions (?)
 
