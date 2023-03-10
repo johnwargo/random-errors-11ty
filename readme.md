@@ -1,8 +1,8 @@
 # Random Development Errors (Eleventy)
 
-The Eleventy version of the static web site for [randomerrors.dev](https://randomerrors.dev).  This is a work in progress.
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d0df3329-8819-45b4-9920-240104777d6c/deploy-status)](https://app.netlify.com/sites/random-errors/deploys)
+
+The Eleventy version of the static web site for [randomerrors.dev](https://randomerrors.dev).  This is a work in progress.
 
 ![Home Page](images/image-01.png)
 
@@ -23,9 +23,9 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 * [x] Add Buy me a coffee
 * [x] Add Favicons
 * [x] Publish site to Netlify
-* [ ] Connect site to jmwtest.com during development
 * [ ] Add Google Analytics
 * [ ] Add Site Search (Algolia)
+* [ ] Switch DNS
 
 ## Google Analytics
 
