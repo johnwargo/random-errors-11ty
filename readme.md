@@ -27,8 +27,6 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 * [x] Add Google Analytics
 * [x] Switch DNS
 * [x] Add email link on the bottom (do I have an email address)
-* [ ] Minify CSS
-* [ ] Minify JavaScript
 * [ ] Add Site Search (Algolia)
 * [ ] Add Discussions (?)
 
