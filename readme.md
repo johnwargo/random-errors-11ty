@@ -18,10 +18,8 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 * [x] Categories menu
 * [x] Update contact options
 * [x] Add number of pages and buttons to pagination
-* [ ] Add Description field to front matter
-* [ ] Contact form at https://formspree.io/
-* [ ] Add Buy me a coffee
-* [ ] Add Favicons
+* [x] Add Buy me a coffee
+* [x] Add Favicons
 * [ ] Publish site to Netlify
 * [ ] Connect site to jmwtest.com during development
 * [ ] Add Google Analytics
@@ -32,3 +30,19 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 * Random Errors-GA4
 * Property ID: 311016183
 * Measurement ID: G-ZWB41V4FM5
+
+
+```javascript
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="johnwargo" data-color="#5F7FFF" data-emoji="☕"  data-font="Poppins" data-text="Buy me a Coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+```
+
+```html
+<br/>
+<p>If this article helps you, please consider
+<a href="https://www.buymeacoffee.com/johnwargo" target="_blank"><img
+  src="https://cdn.buymeacoffee.com/buttons/default-orange.png"
+  alt="Buy Me A Coffee"
+  height="41"
+  width="174"></a>
+</p>
+```

@@ -54,6 +54,7 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPassthroughCopy("src/assets/js/*");
 	eleventyConfig.addPassthroughCopy("src/assets/sass/*");
 	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
+	eleventyConfig.addPassthroughCopy("src/favicon/*");
 
 	eleventyConfig.addPassthroughCopy("src/images/*");	
 	// eleventyConfig.addPassthroughCopy("src/images/2019/*.jpg");	
