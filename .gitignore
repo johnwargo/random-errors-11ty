@@ -3,4 +3,4 @@ node_modules/
 _site/
 
 # Files
-algolia-keys.txt
+package-lock.json
