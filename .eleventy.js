@@ -40,23 +40,38 @@ module.exports = eleventyConfig => {
 		return result;
 	});
 
+	// https://www.raymondcamden.com/2020/06/24/adding-algolia-search-to-eleventy-and-netlify
+	// Remove <code>.*</code>, remove HTML, then with plain text, limit to 5k chars
+	eleventyConfig.addFilter('algExcerpt', function (text) {
+		//first remove code
+		text = text.replace(/<code class="language-.*?">.*?<\/code>/sg, '');
+		//now remove html tags
+		text = text.replace(/<.*?>/g, '');
+		//now limit to 5k
+		return text.substring(0, 5000);
+	});
+
+	eleventyConfig.addFilter('jsonify', function (variable) {
+		return JSON.stringify(variable);
+	});
+
 	const english = new Intl.DateTimeFormat("en");
 	eleventyConfig.addFilter("niceDate", function (d) {
 		return english.format(d);
 	});
 
 	function currentYear() {
-    const today = new Date();
-    return today.getFullYear();
-  }
+		const today = new Date();
+		return today.getFullYear();
+	}
 
-	eleventyConfig.addPassthroughCopy("src/assets/css/*");	
+	eleventyConfig.addPassthroughCopy("src/assets/css/*");
 	eleventyConfig.addPassthroughCopy("src/assets/js/*");
 	eleventyConfig.addPassthroughCopy("src/assets/sass/*");
 	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
 	eleventyConfig.addPassthroughCopy("src/favicon/*");
 
-	eleventyConfig.addPassthroughCopy("src/images/*");	
+	eleventyConfig.addPassthroughCopy("src/images/*");
 	// eleventyConfig.addPassthroughCopy("src/images/2019/*.jpg");	
 	// eleventyConfig.addPassthroughCopy("src/images/2020/*.jpg");	
 	// eleventyConfig.addPassthroughCopy("src/images/2021/*.jpg");	

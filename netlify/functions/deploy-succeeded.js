@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
 
     /// HANDLE ALOGLIA
     // first, get my index
-    let dataResp = await fetch('https://eleventyalgolia.netlify.app/algolia.json');
+    let dataResp = await fetch('https://randomerrors.netlify.app//algolia.json');
 
     let data = await dataResp.json();
     console.log('Successfully got the data, size of articles ' + data.length, data[0].title);
@@ -29,7 +29,7 @@ exports.handler = async (event, context) => {
     console.log('Algolia indexing updated. Hopefully.');
 
 
-    return { statusCode: 200, body: 'I\'m done with this shit...' }
+    return { statusCode: 200, body: 'All done!' }
 
   } catch (err) {
     console.log('error handler for function ran', err.toString());
