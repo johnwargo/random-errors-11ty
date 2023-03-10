@@ -12,7 +12,7 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 + Framework: [Eleventy](https://www.11ty.dev/)
 + Source: [Github](https://github.com/johnwargo/random-errors-11ty)
 + Hosting: [Netlify](https://app.netlify.com/sites/random-errors/overview)
-+ Backdoor Access: [Random Errors](https://random-errors.netlify.app/)
++ Backdoor Access: [Random Errors](https://randomerrors.netlify.app/)
 
 ## Tasks
 
@@ -24,8 +24,8 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 * [x] Add Favicons
 * [x] Publish site to Netlify
 * [x] Add Google Analytics
+* [x] Switch DNS
 * [ ] Add Site Search (Algolia)
-* [ ] Switch DNS
 * [ ] Add Discussions (?)
 
 ## Google Analytics
