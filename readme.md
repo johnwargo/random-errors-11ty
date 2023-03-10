@@ -13,6 +13,7 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 + Source: [Github](https://github.com/johnwargo/random-errors-11ty)
 + Hosting: [Netlify](https://app.netlify.com/sites/random-errors/overview)
 + Backdoor Access: [Random Errors](https://randomerrors.netlify.app/)
++ Email Obfuscator: http://www.wbwip.com/wbw/emailencoder.html
 
 ## Tasks
 
@@ -25,7 +26,7 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 * [x] Publish site to Netlify
 * [x] Add Google Analytics
 * [x] Switch DNS
-* [ ] Add email link on the bottom (do I have an email address)
+* [x] Add email link on the bottom (do I have an email address)
 * [ ] Minify CSS
 * [ ] Minify JavaScript
 * [ ] Add Site Search (Algolia)
