@@ -1,0 +1,27 @@
+---
+title: Categories
+layout: default
+---
+
+{% assign categories = collections.categories | sort %}
+
+<section id="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="content">
+          <article class="box page-content">
+            <p>Wiew all of the posts for a particular category by clicking on the the categories listed below. There are {{ categories.length }} categories on the site today.</p>
+
+            {% for category in categories %}
+              <ul>
+                <li><a href="{{ "/" | htmlBaseUrl }}category/{{ category | slugify }}">{{ category | capitalize }}</a></li>
+              </ul>
+            {% endfor %}
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

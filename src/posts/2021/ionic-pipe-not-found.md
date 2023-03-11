@@ -9,19 +9,18 @@ I'm building a web app using Ionic and needed a [Pipe](https://angular.io/guide/
 
 it's a pretty simple Pipe, just mapping the object values into a comma-separated list:
 
-```typescript
+{% highlight javascript %}
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({
-  name: 'commaObject'
-})
+@Pipe({ name: 'commaObject' })
+
 export class CommaObjectPipe implements PipeTransform {
 
   transform(value: unknown, ...args: unknown[]): unknown {
     return Object.keys(value).map((k) => value[k]).join(', ');
   }
 }
-```
+{% endhighlight %}
 
 I found a couple of tutorials and followed them, but I couldn't get it to work. I thought I was doing it right, but apparently not. Every time I tested the app, I received a Pipe not found error.
 
