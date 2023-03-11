@@ -71,12 +71,8 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
 	eleventyConfig.addPassthroughCopy("src/favicon/*");
 
-	eleventyConfig.addPassthroughCopy("src/images/*");
-	// eleventyConfig.addPassthroughCopy("src/images/2019/*.jpg");	
-	// eleventyConfig.addPassthroughCopy("src/images/2020/*.jpg");	
-	// eleventyConfig.addPassthroughCopy("src/images/2021/*.jpg");	
-	// eleventyConfig.addPassthroughCopy("src/images/2022/*.jpg");	
-	// eleventyConfig.addPassthroughCopy("src/images/2023/*.jpg");	
+	eleventyConfig.addPassthroughCopy("src/images/*");	
+	eleventyConfig.addPassthroughCopy("src/images/2023/*.jpg");	
 
 	return {
 		dir: {
