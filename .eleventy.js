@@ -60,16 +60,12 @@ module.exports = eleventyConfig => {
 		return english.format(d);
 	});
 
-	function currentYear() {
-		const today = new Date();
-		return today.getFullYear();
-	}
-
 	eleventyConfig.addPassthroughCopy("src/assets/css/*");
 	eleventyConfig.addPassthroughCopy("src/assets/js/*");
 	eleventyConfig.addPassthroughCopy("src/assets/sass/*");
 	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
 	eleventyConfig.addPassthroughCopy("src/favicon/*");
+	eleventyConfig.addPassthroughCopy("src/buildinfo.js");
 
 	eleventyConfig.addPassthroughCopy("src/images/*");	
 	eleventyConfig.addPassthroughCopy("src/images/2023/*.jpg");	
