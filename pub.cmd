@@ -1,3 +1,4 @@
+call gen-build-info src/_data
 git add -A
 git commit -m "updated %date% %time%"
 git push
