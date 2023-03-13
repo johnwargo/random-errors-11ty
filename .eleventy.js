@@ -60,13 +60,13 @@ module.exports = eleventyConfig => {
 		return english.format(d);
 	});
 
+	eleventyConfig.addPassthroughCopy("src/_data/*");
+	eleventyConfig.addPassthroughCopy("src/favicon/*");
 	eleventyConfig.addPassthroughCopy("src/assets/css/*");
 	eleventyConfig.addPassthroughCopy("src/assets/js/*");
 	eleventyConfig.addPassthroughCopy("src/assets/sass/*");
 	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
-	eleventyConfig.addPassthroughCopy("src/favicon/*");
-	eleventyConfig.addPassthroughCopy("src/buildinfo.js");
-
+	// Images folders, assumes cascading folders per year
 	eleventyConfig.addPassthroughCopy("src/images/*");	
 	eleventyConfig.addPassthroughCopy("src/images/2023/*.jpg");	
 
