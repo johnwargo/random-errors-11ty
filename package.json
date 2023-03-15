@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm version patch && eleventy"
+    "pbuild": "npm version patch && gen-build-info src/_data && eleventy",
+    "build": "eleventy"
   },
   "author": "John M. Wargo",
   "repository": {
