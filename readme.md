@@ -15,6 +15,8 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 + Backdoor Access: [Random Errors](https://randomerrors.netlify.app/)
 + Email Obfuscator: http://www.wbwip.com/wbw/emailencoder.html
 
+Search Page shamelessly stolen from Ray Camden:  https://github.com/cfjedimaster/raymondcamden2020/blob/master/search.liquid
+
 ## Tasks
 
 * [x] Select theme and implement
@@ -27,8 +29,9 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 * [x] Add Google Analytics
 * [x] Switch DNS
 * [x] Add email link on the bottom (do I have an email address)
-* [ ] Add Site Search (Algolia)
+* [x] Add Site Search (Algolia)
 * [ ] Add Discussions (?)
+* [ ] Rebuild search form (no Vue)
 
 ## Google Analytics
 
