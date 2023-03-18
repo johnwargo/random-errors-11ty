@@ -52,6 +52,11 @@ layout: default
 
   <p>
     <img src="/images/algolia.webp" title="Search by Algolia">
+    <p>Search implementation shamelessly
+      <s>stolen</s>
+      borrowed from
+      <a href="https://github.com/cfjedimaster/raymondcamden2020/blob/master/search.liquid" target="_blank">Raymond Camden</a>
+    </p>
   </p>
 {% endraw %}
 
@@ -109,6 +114,8 @@ layout: default
         if (this.search === '') 
           return;
         
+
+
         this.searching = true;
         this.noResults = false;
         console.log('search for ' + this.search);
