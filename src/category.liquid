@@ -11,25 +11,13 @@ eleventyComputed:
 
 {% assign posts = collections.post | filterByCategory: category %}
 
-<section id="main">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="content">
-          <article class="box page-content">
-            <header>
-              <h2>{{ title }}</h2>
-              <p>All posts for a single category, in reverse chronological order.</p>
-            </header>
-            {% for post in posts reversed %}
-              <div>
-                <a href="{{post.url}}">{{ post.data.title }}</a>, posted {{ post.date | niceDate }}
-                {% excerpt post %}
-              </div>
-            {% endfor %}
-          </article>
-        </div>
-      </div>
-    </div>
+<header>
+  <h2>{{ title }}</h2>
+  <p>All posts for a single category, in reverse chronological order.</p>
+</header>
+{% for post in posts reversed %}
+  <div>
+    <a href="{{post.url}}">{{ post.data.title }}</a>, posted {{ post.date | niceDate }}
+    {% excerpt post %}
   </div>
-</section>
+{% endfor %}

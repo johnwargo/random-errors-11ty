@@ -2,22 +2,10 @@
 title: About
 layout: default
 ---
+## {{ title }}
 
-<section id="main">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="content">
-          <article class="box page-content">
-            <header>
-              <h2>{{ title }}</h2>
-            </header>
-            <img src="/images/jmw-cartoon-200.png">
-            <p>I'm <a href="https://johnwargo.com" target="_blank">John M. Wargo</a>. 
-            <p>Over the years, I've learned a lot of different technologies, and even written <a href="https://johnwargobooks.com" target="_blank">a few books</a> about them. When learning something new, developing an app, building an app server, or writing some useful utility, I regularly encounter weird problems that I never seem to find the resolution to online. After encountering a couple of weird ones in a week, I decided to create this site as a place to publish the answers online in the hope I'll help others in need when they need it. I hope this helps you.</p>
-          </article>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+![JMW Avatar](/images/jmw-cartoon-200.png)
+
+I'm [John M. Wargo](https://johnwargo.com).
+
+Over the years, I've learned a lot of different technologies, and even written [a few books](https://johnwargobooks.com) about them. When learning something new, developing an app, building an app server, or writing some useful utility, I regularly encounter weird problems that I never seem to find the resolution to online. After encountering a couple of weird ones in a week, I decided to create this site as a place to publish the answers online in the hope I'll help others in need when they need it. I hope this helps you
