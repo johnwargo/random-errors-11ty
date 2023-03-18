@@ -13,8 +13,10 @@ eleventyComputed:
 
 <header>
   <h2>{{ title }}</h2>
-  <p>All posts for a single category, in reverse chronological order.</p>
 </header>
+
+<p>All posts for a single category, in reverse chronological order.</p>
+
 {% for post in posts reversed %}
   <div>
     <a href="{{post.url}}">{{ post.data.title }}</a>, posted {{ post.date | niceDate }}

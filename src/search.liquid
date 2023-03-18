@@ -1,23 +1,11 @@
 ---
-title: Search Page
+title: Search
 layout: default
-permalink:
-  search: /search/
 ---
 
 <header>
   <h2>{{ title }}</h2>
+  <p>Search the site</p>
 </header>
 
-{% raw %}
-  <div id="app">
-    <input v-model="search" type="search">
-    <button @click="doSearch">Search</button>
-    <div v-if="results">
-      <h3>Results</h3>
-      <p v-for="result in results">
-        <a :href="result.url">{{ result.title }}</a>
-      </p>
-    </div>
-  </div>
-{% endraw %}
+<p>Tri-tip picanha ground round andouille jerky venison. Alcatra filet mignon rump beef ribs, bacon kielbasa spare ribs ham hock ball tip buffalo pork sausage short ribs. Bresaola salami leberkas ribeye andouille. Alcatra porchetta sausage spare ribs tenderloin pig strip steak swine tail hamburger ham bresaola kevin pork. T-bone doner jowl short loin, salami turkey pastrami pork. Sirloin tenderloin pork belly, flank ham hock prosciutto venison pork chop pork chuck picanha beef ribs brisket.</p>
