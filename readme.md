@@ -30,7 +30,6 @@ Search Page shamelessly stolen from Ray Camden:  https://github.com/cfjedimaster
 * [x] Switch DNS
 * [x] Add email link on the bottom (do I have an email address)
 * [x] Add Site Search (Algolia)
-* [ ] Add Discussions (?)
 * [ ] Rebuild search form (no Vue)
 
 ## Google Analytics
@@ -38,7 +37,6 @@ Search Page shamelessly stolen from Ray Camden:  https://github.com/cfjedimaster
 * Random Errors-GA4
 * Property ID: 311016183
 * Measurement ID: G-ZWB41V4FM5
-
 
 ```javascript
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="johnwargo" data-color="#5F7FFF" data-emoji="☕"  data-font="Poppins" data-text="Buy me a Coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
