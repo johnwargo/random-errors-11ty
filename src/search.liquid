@@ -5,31 +5,18 @@ permalink:
   search: /search/
 ---
 
-<section id="main">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="content">
-          <article class="box page-content">
-            <header>
-              <h2>{{ title }}</h2>
-            </header>
-            {% raw %}
-              <div id="app">
-                <input v-model="search" type="search">
-                <button @click="doSearch">Search</button>
-                <div v-if="results">
-                  <h3>Results</h3>
-                  <p v-for="result in results">
-                    <a :href="result.url">{{ result.title }}</a>
-                  </p>
-                </div>
-              </div>
-            {% endraw %}
-
-          </article>
-        </div>
-      </div>
+<header>
+  <h2>{{ title }}</h2>
+</header>
+{% raw %}
+  <div id="app">
+    <input v-model="search" type="search">
+    <button @click="doSearch">Search</button>
+    <div v-if="results">
+      <h3>Results</h3>
+      <p v-for="result in results">
+        <a :href="result.url">{{ result.title }}</a>
+      </p>
     </div>
   </div>
-</section>
+{% endraw %}
