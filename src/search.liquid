@@ -30,15 +30,15 @@ layout: default
 
     <div v-if="noResults">
       <p>
-        Sorry, but there were no results.
+        Sorry, I found no results for that search query, please try again.
       </p>
     </div>
     <div v-if="results && !noResults">
       <p v-if="numResults > 1">
-        There were {{ numResults }} total results for this search.
+        I found {{ numResults }} results for that search query.
       </p>
       <p v-else>
-        There was one total result for this search.
+        I only found one result for that search query.
       </p>
       <p v-for="(result,idx) in results" :key="idx">
         {{ idx+1 }})
@@ -114,6 +114,7 @@ layout: default
         if (this.search === '') 
           return;
         
+
 
 
         this.searching = true;
