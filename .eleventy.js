@@ -23,7 +23,6 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.setLibrary("md", markdownLib);
 
-
 	// From ray camden's blog, first paragraph as excerpt
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
 	function extractExcerpt(post) {

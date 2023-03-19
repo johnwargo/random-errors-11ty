@@ -1,19 +1,19 @@
 {
   "name": "random-errors-11ty",
   "version": "0.0.4",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "eleventy --serve",
-    "build": "gen-build-info && eleventy",
-    "pbuild": "npm version patch && gen-build-info src/_data && eleventy"
-  },
+  "description": "Publishing solutions for random errors I encounter when writing code.",
   "author": "John M. Wargo",
   "repository": {
     "type": "git",
     "url": "https://github.com/johnwargo/random-errors-11ty"
   },
   "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "eleventy --serve",
+    "build": "gen-build-info && eleventy",
+    "pbuild": "npm version patch && gen-build-info src/_data && eleventy"
+  },  
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
