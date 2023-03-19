@@ -19,7 +19,7 @@ and
 No matching service worker detected. You may need to reload the page, or check that the service worker for the current page also controls...'
 ```
 
-It took me a while, but I finally figured it out. In the W3C [Web App Manifest](https://www.w3.org/TR/appmanifest/#navigation-scope) specification, I found the following:
+It took me a while, but I finally figured it out. In the W3C [Web App Manifest](https://www.w3.org/TR/appmanifest/#navigation-scope){target="_blank"} specification, I found the following:
 
 ```text
 > If the scope member is not present in the manifest, it defaults to the parent path of the start_url member. For example, if `start_url` is `/pages/welcome.html`, and `scope` is missing, the navigation scope will be `/pages/` on the same origin. If `start_url` is `/pages/` (the trailing slash is important!), the navigation scope will be `/pages/`.
@@ -44,6 +44,6 @@ When hosting the PWA in a folder on my server, I did the following:
 "scope": "/myapp/",
 ```
 
-With that in place, it works great; you can see the final version on the (currently incomplete) [PWA Learn](https://pwalearn.com/tipcalc/) web site.
+With that in place, it works great; you can see the final version on the (currently incomplete) [PWA Learn](https://pwalearn.com/tipcalc/){target="_blank"} web site.
 
-Google's [Web Manifest documentation](https://developers.google.com/web/fundamentals/web-app-manifest/) has this type of configuration in its sample manifest file.
+Google's [Web Manifest documentation](https://developers.google.com/web/fundamentals/web-app-manifest/){target="_blank"} has this type of configuration in its sample manifest file.

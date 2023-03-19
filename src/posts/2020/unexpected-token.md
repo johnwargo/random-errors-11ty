@@ -11,7 +11,7 @@ In a web app I've been working on, when I ran the application on an iOS device o
 Expected an opening '(' before a method's parameter list
 ```
 
-Looking around the Internet, I found the following article that explained the issue: [https://stackoverflow.com/questions/60026651/safari-unexpected-token-expected-an-opening-before-a-methods-paramet](https://stackoverflow.com/questions/60026651/safari-unexpected-token-expected-an-opening-before-a-methods-paramet).
+Looking around the Internet, I found the following article that explained the issue: [https://stackoverflow.com/questions/60026651/safari-unexpected-token-expected-an-opening-before-a-methods-paramet](https://stackoverflow.com/questions/60026651/safari-unexpected-token-expected-an-opening-before-a-methods-paramet){target="_blank"}.
 
 My app had the following object defined:
 
@@ -34,7 +34,7 @@ export class Config {
 }
 ```
 
-It's a web app that talks to a [Particle Photon](https://particle.io) project, so I need the Particle Access Token plus the device ID for the Photon device the app talks to. Apparently you can't define constants in a JavaScript class on Safari - who knew.
+It's a web app that talks to a [Particle Photon](https://particle.io){target="_blank"} project, so I need the Particle Access Token plus the device ID for the Photon device the app talks to. Apparently you can't define constants in a JavaScript class on Safari - who knew.
 
 Anyway, the fix was to update the code as shown below and everything seems to work.
 

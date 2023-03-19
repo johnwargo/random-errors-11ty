@@ -1,4 +1,7 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+// https://github.com/11ty/eleventy/issues/2301
+const markdownIt = require("markdown-it");
+const markdownItAttrs = require("markdown-it-attrs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
@@ -7,6 +10,19 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(syntaxHighlight);
+
+	// https://github.com/11ty/eleventy/issues/2301
+	const mdOptions = {
+    html: true,
+    breaks: true,
+    linkify: true,
+  };
+  const markdownLib = markdownIt(mdOptions)
+    .use(markdownItAttrs)
+    .disable("code");
+
+  eleventyConfig.setLibrary("md", markdownLib);
+
 
 	// From ray camden's blog, first paragraph as excerpt
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));

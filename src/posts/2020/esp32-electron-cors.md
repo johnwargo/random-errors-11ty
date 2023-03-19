@@ -11,7 +11,7 @@ I'm working on a project that uses an ESP32 device with an Ionic Capacitor Elect
 blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource
 ```
 
-My ESP32 app uses the [ESP32 HTTPS Server](https://github.com/fhessel/esp32_https_server), and the fix for this is pretty simple. In the code that processes the API request, simply add the `Access-Control-Allow-Origin` header to the response and the error goes away.
+My ESP32 app uses the [ESP32 HTTPS Server](https://github.com/fhessel/esp32_https_server){target="_blank"}, and the fix for this is pretty simple. In the code that processes the API request, simply add the `Access-Control-Allow-Origin` header to the response and the error goes away.
 
 ```cpp
 res->setHeader("Access-Control-Allow-Origin", "*");
