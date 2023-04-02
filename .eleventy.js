@@ -10,7 +10,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 
 // Create a helpful production flag
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = process.env.RUNTIME_ENV === 'production';
 
 module.exports = eleventyConfig => {
 
