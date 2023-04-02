@@ -32,7 +32,7 @@ Search Page shamelessly stolen from Ray Camden:  https://github.com/cfjedimaster
 * [x] Add Site Search (Algolia)
 * [ ] Make categories data file with article counts (11ty-cat-pages)
 * [ ] Make categories data file with description (11ty-cat-pages)
-* [ ] Minification - https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
+* [x] Minification - https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
 * [ ] Fix Case issue for tags (no lowercase)
 * [ ] Rebuild search form (no Vue)
 * [ ] Add description field to posts
