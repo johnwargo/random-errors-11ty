@@ -5,6 +5,13 @@ const markdownItAttrs = require("markdown-it-attrs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
+// Transforms
+// https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
+const htmlMinTransform = require('./src/transforms/html-min-transform.js');
+
+// Create a helpful production flag
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = eleventyConfig => {
 
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
@@ -13,15 +20,15 @@ module.exports = eleventyConfig => {
 
 	// https://github.com/11ty/eleventy/issues/2301
 	const mdOptions = {
-    html: true,
-    breaks: true,
-    linkify: true,
-  };
-  const markdownLib = markdownIt(mdOptions)
-    .use(markdownItAttrs)
-    .disable("code");
+		html: true,
+		breaks: true,
+		linkify: true,
+	};
+	const markdownLib = markdownIt(mdOptions)
+		.use(markdownItAttrs)
+		.disable("code");
 
-  eleventyConfig.setLibrary("md", markdownLib);
+	eleventyConfig.setLibrary("md", markdownLib);
 
 	// From ray camden's blog, first paragraph as excerpt
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
@@ -82,8 +89,13 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPassthroughCopy("src/assets/sass/*");
 	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
 	// Images folders, assumes cascading folders per year
-	eleventyConfig.addPassthroughCopy("src/images/*");	
-	eleventyConfig.addPassthroughCopy("src/images/2023/*.jpg");	
+	eleventyConfig.addPassthroughCopy("src/images/*");
+	eleventyConfig.addPassthroughCopy("src/images/2023/*.jpg");
+
+	// Only minify HTML if we are in production because it slows builds _right_ down
+	if (isProduction) {
+		eleventyConfig.addTransform('htmlmin', htmlMinTransform);
+	}
 
 	return {
 		dir: {
