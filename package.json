@@ -14,7 +14,7 @@
     "build": "gen-build-info && eleventy",
     "pbuild": "npm version patch && gen-build-info src/_data && eleventy"
   },
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
