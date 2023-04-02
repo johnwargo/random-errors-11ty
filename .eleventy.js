@@ -7,7 +7,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 // Transforms
 // https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
-const htmlMinTransform = require('./src/transforms/html-min-transform.js');
+const htmlMinTransform = require('./src/transforms/html-min.js');
 
 // Create a helpful production flag
 const isProduction = process.env.RUNTIME_ENV === 'production';
@@ -92,7 +92,7 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPassthroughCopy("src/images/*");
 	eleventyConfig.addPassthroughCopy("src/images/2023/*.jpg");
 
-	// Only minify HTML if we are in production because it slows builds _right_ down
+	// Only minify HTML if we are in production because it slows builds
 	if (isProduction) {
 		eleventyConfig.addTransform('htmlmin', htmlMinTransform);
 	}
