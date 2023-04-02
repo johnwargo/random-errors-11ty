@@ -8,6 +8,7 @@ permalink: /algolia.json
   {
   "title": {{ post.data.title | jsonify }},
   "date":"{{ page.date }}",
+  "date_timestamp": {{ post.date | date: '%s' }},
   "url":"{{ post.url | prepend: site.url }}",
   "content":{{ post.templateContent | algExcerpt | jsonify }}
   }{% unless forloop.last %},{% endunless %}
