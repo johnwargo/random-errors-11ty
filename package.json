@@ -10,6 +10,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "abuild": "eleventy && algolia-idxup --default",
     "start": "eleventy --serve",
     "build": "gen-build-info && eleventy",
     "pbuild": "npm version patch && gen-build-info src/_data && eleventy"
