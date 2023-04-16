@@ -1,0 +1,47 @@
+[
+  {
+    "category": "Android Development",
+    "count": 1,
+    "description": "Topics related to Android Development."
+  },
+  {
+    "category": "CMS",
+    "count": 1,
+    "description": "Topics related to Content Management Systems."
+  },
+  {
+    "category": "Eleventy",
+    "count": 2,
+    "description": "Topics related to the Eleventy static site generator."
+  },
+  {
+    "category": "Flutter Development",
+    "count": 1,
+    "description": "Topics related to application development using Goggle's Flutter framework and SDK."
+  },
+  {
+    "category": "Google App Script",
+    "count": 1,
+    "description": "Topics related to writing apps using Google App Script (Good Workspace add-ons)."
+  },
+  {
+    "category": "IoT",
+    "count": 2,
+    "description": "Topics related to the Internet of Things (IoT)."
+  },
+  {
+    "category": "Ionic Framework",
+    "count": 7,
+    "description": "Topics related to application development using the Ionic framework."
+  },
+  {
+    "category": "Web Development",
+    "count": 1,
+    "description": "Topics related to web development."
+  },
+  {
+    "category": "Web Hosting",
+    "count": 2,
+    "description": "Topics related to web application/site hosting providers."
+  }
+]

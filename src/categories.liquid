@@ -3,16 +3,17 @@ title: Categories
 layout: default
 ---
 
-{% assign categories = collections.categories | sort %}
+{% assign categories = category-meta | sort %}
 
-<header>
-  <h2>{{ title }}</h2>
-</header>
+<p>View all posts for a particular category by clicking on one of the categories listed below. There are {{ categories.length }} categories on the site today.</p>
 
-<p>View all of the posts for a particular category by clicking on one of the categories listed below. There are {{ categories.length }} categories on the site today.</p>
-
-{% for category in categories %}
-  <ul>
-    <li><a href="{{ "/" | htmlBaseUrl }}category/{{ category | slugify }}">{{ category | capitalize }}</a></li>
-  </ul>
+{% for catData in categories %}
+  <p>
+    <a href="{{ "/" | htmlBaseUrl }}category/{{ catData.category | slugify }}">{{ catData.category }}</a>
+    ({{ catData.count }} posts)
+    {% if catData.description %}
+      <br/>
+      {{ catData.description }}
+    {% endif %}
+  </p>
 {% endfor %}

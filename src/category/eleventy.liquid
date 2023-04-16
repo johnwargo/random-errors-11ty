@@ -1,0 +1,36 @@
+---js
+{
+  "layout": "default",
+  "pagination": {
+    "data": "collections.post",
+    "size": 20,
+    "alias": "catposts",
+    "before": function(paginationData, fullData){ return paginationData.filter((item) => item.data.categories.includes('Eleventy'));}
+  },
+  "category": "Eleventy",
+  "eleventyComputed": {
+    "title": "Category: {{ category }}"
+  },
+  "permalink": "category/{{ category | slugify }}/{% if pagination.pageNumber != 0 %}page-{{ pagination.pageNumber }}/{% endif %}"
+}
+---
+
+<h3>Category: {{ category }}</h3>
+
+<p>All posts for the {{ category }} category, in reverse chronological order.</p>
+
+{% for post in catposts reversed %}
+  <div>
+    <a href="{{post.url}}">{{ post.data.title }}</a>, posted {{ post.date | niceDate }}
+    {% excerpt post %}
+  </div>
+{% endfor %}
+
+<p>
+  {% if pagination.href.previous %}
+    <button type="button" onclick="location.href='{{ pagination.href.previous }}'">Previous</button>
+  {% endif %}
+  {% if pagination.href.next %}
+    <button type="button" onclick="location.href='{{ pagination.href.next }}'">Next</button>
+  {% endif %}
+</p>
