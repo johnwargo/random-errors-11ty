@@ -12,13 +12,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "abuild": "eleventy && algolia-idxup --default",
     "start": "eleventy --serve",
-    "build": "gen-build-info && eleventy",
-    "pbuild": "npm version patch && gen-build-info src/_data && eleventy"
+    "build": "11ty-cat-pages && gen-build-info && eleventy",
+    "pbuild": "npm version patch && 11ty-cat-pages && gen-build-info src/_data && eleventy"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+    "eleventy-category-pages": "^0.0.2",
     "generate-build-info": "^0.0.2",
     "html-minifier": "^4.0.0",
     "markdown-it-attrs": "^4.1.6"
