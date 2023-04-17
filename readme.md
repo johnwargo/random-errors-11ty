@@ -30,10 +30,11 @@ Search Page shamelessly stolen from Ray Camden:  https://github.com/cfjedimaster
 * [x] Switch DNS
 * [x] Add email link on the bottom (do I have an email address)
 * [x] Add Site Search (Algolia)
-* [ ] Make categories data file with article counts (11ty-cat-pages)
-* [ ] Make categories data file with description (11ty-cat-pages)
+* [x] Make categories data file with article counts (11ty-cat-pages)
+* [x] Make categories data file with description (11ty-cat-pages)
 * [x] Minification - https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
-* [ ] Fix Case issue for tags (no lowercase)
+* [x] Fix Case issue for tags (no lowercase)
+* [ ] Add statistics page
 * [ ] Rebuild search form (no Vue)
 * [ ] Add description field to posts
 
