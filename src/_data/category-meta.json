@@ -11,7 +11,7 @@
   },
   {
     "category": "Eleventy",
-    "count": 2,
+    "count": 3,
     "description": "Topics related to the Eleventy static site generator."
   },
   {
@@ -33,6 +33,11 @@
     "category": "Ionic Framework",
     "count": 7,
     "description": "Topics related to application development using the Ionic framework."
+  },
+  {
+    "category": "Static Site Generators",
+    "count": 1,
+    "description": ""
   },
   {
     "category": "Web Development",

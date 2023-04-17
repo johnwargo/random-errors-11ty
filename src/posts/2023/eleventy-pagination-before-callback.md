@@ -5,10 +5,7 @@ categories: [Eleventy, Static Site Generators]
 tags: post
 ---
 
-I've been trying to figure out how to easily build:
-
-1. A categories page for this site that lists all categories including the number of posts per category (easily done in Eleventy).
-2. A separate page for each category with pagination when the article list is greater than 20 posts.
+I've been trying to figure out how to easily build a categories page for this site that lists all categories including the number of posts per category (easily done in Eleventy) and a separate page for each category with pagination when the article list is greater than 20 posts.
 
 The first one's easy and the second one is typically done manually in all the other solutions I've been able to find.
 
