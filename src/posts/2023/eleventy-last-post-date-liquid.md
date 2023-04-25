@@ -20,7 +20,7 @@ Getting the last post date was tougher as I couldn't do this:
 {{ collections.posts[collections.posts.length - 1].date | readableDate }}
 {% endhighlight %}
 
-The liquid templating engine doesn't allow math that way. Instead, you must do the math in a variable assignment using the `minus` filter then use the variable as the index to the last item in the posts array:
+The liquid templating engine doesn't allow math that way in an array index. Instead, you must do the math in a variable assignment using the `minus` filter, then use the variable as the index to the last item in the posts array:
 
 {% highlight liquid %}
 {% assign lastIndex = collections.posts.length | minus: 1 %}
@@ -58,4 +58,4 @@ Here's a complete example as a table:
 </table>
 {% endhighlight %}
 
-Special thanks to [chriskirknielsen](https://chriskirknielsen.com/designs/) for providing me with this solution on Discord.
+Special thanks to [chriskirknielsen](https://chriskirknielsen.com/designs/){target="_blank"} for providing me with this solution on Discord.
