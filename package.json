@@ -20,9 +20,12 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "eleventy-category-pages": "^0.0.2",
+    "eleventy-plugin-date": "^1.0.0",
     "generate-build-info": "^0.0.2",
     "html-minifier": "^4.0.0",
     "markdown-it-attrs": "^4.1.6"
   },
-  "keywords": []
+  "keywords": [
+    "eleventy"
+  ]
 }

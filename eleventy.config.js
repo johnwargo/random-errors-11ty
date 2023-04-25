@@ -2,6 +2,7 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 // https://github.com/11ty/eleventy/issues/2301
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
+const pluginDate = require("eleventy-plugin-date");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
@@ -15,6 +16,7 @@ const isProduction = process.env.RUNTIME_ENV === 'production';
 module.exports = eleventyConfig => {
 
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+	eleventyConfig.addPlugin(pluginDate);
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -76,14 +78,16 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addFilter('jsonify', function (variable) {
 		return JSON.stringify(variable);
 	});
-
-	const english = new Intl.DateTimeFormat("en");
-	eleventyConfig.addFilter("niceDate", function (d) {
-		return english.format(d);
+	
+	eleventyConfig.addFilter("commaize", function (num) {
+		return num.toLocaleString("en-us");
 	});
 
+	// https://www.lenesaile.com/en/blog/organizing-the-eleventy-config-file/
+	// Copy the favicon files to the root folder
+	eleventyConfig.addPassthroughCopy({ 'src/favicon/*': '/' });
+
 	eleventyConfig.addPassthroughCopy("src/_data/*");
-	eleventyConfig.addPassthroughCopy("src/favicon/*");
 	eleventyConfig.addPassthroughCopy("src/assets/css/*");
 	eleventyConfig.addPassthroughCopy("src/assets/js/*");
 	eleventyConfig.addPassthroughCopy("src/assets/sass/*");
