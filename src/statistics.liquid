@@ -1,0 +1,44 @@
+---
+title: Site Statistics
+description: A list of statistics about this site.
+layout: default
+---
+
+{% assign lastIndex = collections.posts.length | minus: 1 %}
+
+<table>
+  <tbody>
+    <tr>
+      <td>Posts</td>
+      <td>{{ collections.posts.length | commaize }}
+      </td>
+    </tr>
+    <tr>
+      <td>First Post</td>
+      <td>{{ collections.posts[0].date | readableDate }}</td>
+    </tr>
+    <tr>
+      <td>Latest Post</td>
+      <td>
+        {{ collections.posts[lastIndex].date | readableDate }}</td>
+    </tr>
+    <tr>
+      <td>Deployments</td>
+      <td>{{ buildinfo.buildCounter | commaize }}</td>
+    </tr>
+    <tr>
+      <td>Build Date</td>
+      <td>{{ buildinfo.buildDateStr }}</td>
+    </tr>
+    <tr>
+      <td>Build Version</td>
+      <td>{{ buildinfo.buildVersion }}</td>
+    </tr>
+    <tr>
+      <td>Generator</td>
+      <td>
+        <a href="https://www.11ty.dev/" target="_blank">{{ eleventyinfo.generatorStr }}</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
