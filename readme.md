@@ -61,3 +61,6 @@ Search Page shamelessly stolen from Ray Camden:  https://github.com/cfjedimaster
 
 
 {target="_blank"}
+
+{% highlight liquid %}
+{% endhighlight %}
