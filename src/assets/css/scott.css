@@ -1,0 +1,10 @@
+.image.right.coffee {
+  max-width: 290px;
+}
+.image.right.coffee p {
+  margin: 0.5rem 0.5rem 1rem 1rem;
+  line-height: 1.4;
+}
+.main section .image-full {
+  max-width:100%;
+}
