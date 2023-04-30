@@ -11,11 +11,14 @@
   "eleventyComputed": {
     "title": "Category: {{ category }}"
   },
-  "permalink": "category/{{ category | slugify }}/{% if pagination.pageNumber != 0 %}page-{{ pagination.pageNumber }}/{% endif %}"
+  "permalink": "category/{{ category | slugify }}/{% if pagination.pageNumber != 0 %}page-{{ pagination.pageNumber }}/{% endif %}",
+  "description": "Topics related to web development."
 }
 ---
 
 <h3>Category: {{ category }}</h3>
+
+{% include 'pagination-count.html' %}
 
 <p>All posts for the {{ category }} category, in reverse chronological order.</p>
 
@@ -26,11 +29,4 @@
   </div>
 {% endfor %}
 
-<p>
-  {% if pagination.href.previous %}
-    <button type="button" onclick="location.href='{{ pagination.href.previous }}'">Previous</button>
-  {% endif %}
-  {% if pagination.href.next %}
-    <button type="button" onclick="location.href='{{ pagination.href.next }}'">Next</button>
-  {% endif %}
-</p>
+{% include 'pagination-nav.html' %}
