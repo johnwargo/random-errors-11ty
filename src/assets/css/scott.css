@@ -1,7 +1,8 @@
-.image.right.coffee {
+.coffee {
   max-width: 290px;
+  float: right;
 }
-.image.right.coffee p {
+.coffee p {
   margin: 0.5rem 0.5rem 1rem 1rem;
   line-height: 1.4;
 }
