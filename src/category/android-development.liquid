@@ -5,7 +5,7 @@
     "data": "collections.post",
     "size": 20,
     "alias": "catposts",
-    "before": function(paginationData, fullData){ return paginationData.filter((item) => item.data.categories.includes('Android Development'));}
+    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('Android Development')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
   },
   "category": "Android Development",
   "eleventyComputed": {
