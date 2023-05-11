@@ -19,6 +19,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "eleventy-category-pages": "^0.0.5",
     "eleventy-plugin-date": "^1.0.0",
+    "eleventy-plugin-post-stats": "^0.0.5",
     "generate-build-info": "^0.0.3",
     "html-minifier": "^4.0.0",
     "markdown-it-attrs": "^4.1.6"

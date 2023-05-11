@@ -5,6 +5,7 @@ const markdownItAttrs = require("markdown-it-attrs");
 const pluginDate = require("eleventy-plugin-date");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginStats = require('eleventy-plugin-post-stats');
 
 // Transforms
 // https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
@@ -19,6 +20,7 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPlugin(pluginDate);
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(syntaxHighlight);
+	eleventyConfig.addPlugin(pluginStats);
 
 	// https://github.com/11ty/eleventy/issues/2301
 	const mdOptions = {
