@@ -34,9 +34,10 @@ Search Page shamelessly stolen from Ray Camden:  https://github.com/cfjedimaster
 * [x] Make categories data file with description (11ty-cat-pages)
 * [x] Minification - https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
 * [x] Fix Case issue for tags (no lowercase)
-* [ ] Add statistics page
-* [ ] Rebuild search form (no Vue)
+* [x] Add statistics page
+* [ ] Add image shortcode and update pictures
 * [ ] Add description field to posts
+* [ ] Rebuild search form (no Vue)
 
 ## Google Analytics
 
