@@ -6,7 +6,7 @@ categories:
 tags: post
 ---
 
-I use a nom package I created called [Eleventy-New-Post](https://www.npmjs.com/package/eleventy-new-post){target="_blank"} to create new posts for my Eleventy sites. It saves me the work of copying a post file in the project folder then emptying it before adding the new content for the post. It also automates selecting a category for the post from an automatically generated list of all categories used by the site.
+I use a npm package I created called [Eleventy-New-Post](https://www.npmjs.com/package/eleventy-new-post){target="_blank"} to create new posts for my Eleventy sites. It saves me the work of copying a post file in the project folder then emptying it before adding the new content for the post. It also automates selecting a category for the post from an automatically generated list of all categories used by the site.
 
 I ran it this morning to generate a new post for a site and after generating the new post file, I fired up the `eleventy --serve` command to validate something about the post URL when I got this error:
 
@@ -26,3 +26,5 @@ I ran it this morning to generate a new post for a site and after generating the
 ```
 
 The error tells me that the `tags` front matter property caused the problem, but really happened is I asked Eleventy to generate a site using an empty post. As soon as I added content to the post, the error went away.
+
+The error likely reflects the last property in the YAML front matter for the post.
