@@ -5,14 +5,14 @@
     "data": "collections.post",
     "size": 20,
     "alias": "catposts",
-    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('Google App Script')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
+    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('IoT')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
   },
-  "category": "Google App Script",
+  "category": "IoT",
   "eleventyComputed": {
     "title": "Category: {{ category }}"
   },
-  "permalink": "category/{{ category | slugify }}/{% if pagination.pageNumber != 0 %}page-{{ pagination.pageNumber }}/{% endif %}",
-  "description": "Topics related to writing apps using Google App Script (Good Workspace add-ons)."
+  "permalink": "categories/{{ category | slugify }}/{% if pagination.pageNumber != 0 %}page-{{ pagination.pageNumber }}/{% endif %}",
+  "description": "Topics related to the Internet of Things (IoT)."
 }
 ---
 

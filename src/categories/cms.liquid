@@ -5,14 +5,14 @@
     "data": "collections.post",
     "size": 20,
     "alias": "catposts",
-    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('Static Site Generators')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
+    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('CMS')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
   },
-  "category": "Static Site Generators",
+  "category": "CMS",
   "eleventyComputed": {
     "title": "Category: {{ category }}"
   },
-  "permalink": "category/{{ category | slugify }}/{% if pagination.pageNumber != 0 %}page-{{ pagination.pageNumber }}/{% endif %}",
-  "description": "Topics related to application development using the Ionic framework."
+  "permalink": "categories/{{ category | slugify }}/{% if pagination.pageNumber != 0 %}page-{{ pagination.pageNumber }}/{% endif %}",
+  "description": "Topics related to Content Management Systems."
 }
 ---
 

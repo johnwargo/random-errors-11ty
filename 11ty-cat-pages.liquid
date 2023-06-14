@@ -7,7 +7,7 @@ pagination:
 category: 
 eleventyComputed:
   title: "Category: {{ category }}"
-permalink: "category/{{ category | slugify }}/{% if pagination.pageNumber != 0 %}page-{{ pagination.pageNumber }}/{% endif %}"
+permalink: "categories/{{ category | slugify }}/{% if pagination.pageNumber != 0 %}page-{{ pagination.pageNumber }}/{% endif %}"
 ---
 
 <h3>Category: {{ category }}</h3>

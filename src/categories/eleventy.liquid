@@ -5,14 +5,14 @@
     "data": "collections.post",
     "size": 20,
     "alias": "catposts",
-    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('Web Hosting')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
+    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('Eleventy')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
   },
-  "category": "Web Hosting",
+  "category": "Eleventy",
   "eleventyComputed": {
     "title": "Category: {{ category }}"
   },
-  "permalink": "category/{{ category | slugify }}/{% if pagination.pageNumber != 0 %}page-{{ pagination.pageNumber }}/{% endif %}",
-  "description": "Topics related to web application/site hosting providers."
+  "permalink": "categories/{{ category | slugify }}/{% if pagination.pageNumber != 0 %}page-{{ pagination.pageNumber }}/{% endif %}",
+  "description": "Topics related to the Eleventy static site generator."
 }
 ---
 
