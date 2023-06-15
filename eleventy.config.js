@@ -35,9 +35,13 @@ module.exports = eleventyConfig => {
 
 	eleventyConfig.setLibrary("md", markdownLib);
 
-	eleventyConfig.on('eleventy.before', async ({ dir, runMode, outputMode }) => {
-		generateCategoryPages({}, true, false);
-	});
+	var firstRun = true;
+eleventyConfig.on('eleventy.before', async ({ dir, runMode, outputMode }) => {
+  if (firstRun) {
+    firstRun = false;
+    generateCategoryPages({}, true, false);
+  }
+});
 
 	// From ray camden's blog, first paragraph as excerpt
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
