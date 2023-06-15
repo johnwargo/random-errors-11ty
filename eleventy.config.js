@@ -36,12 +36,12 @@ module.exports = eleventyConfig => {
 	eleventyConfig.setLibrary("md", markdownLib);
 
 	var firstRun = true;
-eleventyConfig.on('eleventy.before', async ({ dir, runMode, outputMode }) => {
-  if (firstRun) {
-    firstRun = false;
-    generateCategoryPages({}, true, false);
-  }
-});
+	eleventyConfig.on('eleventy.before', async ({ dir, runMode, outputMode }) => {
+		if (firstRun) {
+			firstRun = false;
+			generateCategoryPages({}, true, false);
+		}
+	});
 
 	// From ray camden's blog, first paragraph as excerpt
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
@@ -89,7 +89,7 @@ eleventyConfig.on('eleventy.before', async ({ dir, runMode, outputMode }) => {
 	eleventyConfig.addFilter('jsonify', function (variable) {
 		return JSON.stringify(variable);
 	});
-	
+
 	eleventyConfig.addFilter("commaize", function (num) {
 		return num.toLocaleString("en-us");
 	});
