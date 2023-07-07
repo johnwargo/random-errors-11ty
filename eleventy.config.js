@@ -91,7 +91,7 @@ module.exports = eleventyConfig => {
 	});
 
 	eleventyConfig.addFilter("commaize", function (num) {
-		return num.toLocaleString("en-us");
+		return parseFloat(num).toLocaleString("en-us");
 	});
 
 	// https://www.lenesaile.com/en/blog/organizing-the-eleventy-config-file/

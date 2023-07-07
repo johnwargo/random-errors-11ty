@@ -6,11 +6,11 @@ layout: default
 
 <h3>Statistics</h3>
 
-{% if collections.postStats.count > 0 %}
+{% if collections.postStats.postCount > 0 %}
   <ul>
     <li>
       <strong>Post Count:</strong>
-      {{ collections.postStats.count | commaize }}</li>
+      {{ collections.postStats.postCount | commaize }}</li>
     <li>
       <strong>Average days between posts:</strong>
       {{ collections.postStats.avgDays | commaize }}</li>
@@ -67,8 +67,8 @@ layout: default
       {% for year in collections.postStats.years %}
         <tr>
           <td>{{ year.year }}</td>
-          <td>{{ year.count }}</td>
-          <td>{{ year.avgDays }}</td>
+          <td>{{ year.postCount | commaize }}</td>
+          <td>{{ year.avgDays | commaize }}</td>
         </tr>
       {% endfor %}
     </tbody>
@@ -88,19 +88,19 @@ layout: default
         {
           type: 'bar',
           label: 'Number of Posts',
-          data: [{% for year in collections.postStats.years %}{{ year.count | commaize }}{%- unless forloop.last %},{% endunless %}{% endfor %}],
+          data: [{% for year in collections.postStats.years %}{{ year.postCount }}{%- unless forloop.last %},{% endunless %}{% endfor %}],
           borderWidth: 1,
           order: 1
         }, {
           type: 'line',
           label: 'Yearly Average Number of Days Between Posts',
-          data: [{% for year in collections.postStats.years %}{{ year.avgDays | commaize }}{%- unless forloop.last %},{% endunless %}{% endfor %}],
+          data: [{% for year in collections.postStats.years %}{{ year.avgDays }}{%- unless forloop.last %},{% endunless %}{% endfor %}],
           lineTension: 0.8,
           order: 2
         }, {
           type: 'line',
           label: 'Site Average Number of Days Between Posts',
-          data: [{% for year in collections.postStats.years %}{{ collections.postStats.avgDays | commaize }}{%- unless forloop.last %},{% endunless %}{% endfor %}],
+          data: [{% for year in collections.postStats.years %}{{ collections.postStats.avgDays }}{%- unless forloop.last %},{% endunless %}{% endfor %}],
           lineTension: 0.8,
           order: 3
         }
