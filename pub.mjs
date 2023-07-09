@@ -68,5 +68,6 @@ if (updatePackage) {
   let msg = "Incrementing package version";
   console.log(`\n${msg}`);
   await $`npm version patch`;
-  await $`git push`;
 }
+
+await $`git push`;
