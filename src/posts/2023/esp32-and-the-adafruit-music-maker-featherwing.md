@@ -10,7 +10,7 @@ Music Maker FeatherWing and ESP32
 I added the Music Maker FeatherWing to a ESP32 Feather V2 device and I’m following the instructions in the tutorial to run the feather_player sample sketch. I put some music files on the memory card, inserted it in the memory card holder then changed the file names in the sketch so it plays the sound files I have on the memory card. 
 When I run the sketch, it displays the memory card file list as expected, loads the first sound file (snore01.mp3 in this case), then immediately panics as shown below:
 
-```text
+```
 Adafruit VS1053 Feather Test
 VS1053 found
 SD OK!
@@ -49,7 +49,7 @@ So apparently this board doesn’t work with ESP32 using interrupts, but there�
 >There are two ways `.feed_buffer()` can be executed: one is to use an interrupt handler that automatically trips when the 'need more data' pin goes high. The other is to call it manually at regular intervals.
 >It sounds like your sketch was trying to use an interrupt but having problems. Disabling the interrupt switched over to calling the function directly, which works better for devices like the ESP32.
 
-Since there's no example of this anywhere, here's a a [Gist](https://gist.github.com/johnwargo/d1faa619fc0b008837bafaabe8581e84){target="_blank"} that solves it and here's the full source as well:
+Since there's no example of this anywhere, here's a [Gist](https://gist.github.com/johnwargo/d1faa619fc0b008837bafaabe8581e84){target="_blank"} that solves it and the full source as well:
 
 ```c
 // Specifically for use with the Adafruit Feather, the pins are pre-set here!
@@ -172,15 +172,6 @@ void setup() {
 
 void loop() {
 
-  // print a dot so we can tell the loop is executing
-  Serial.print(".");
-  // put a blank line every 25 periods
-  counter += 1;
-  if (counter > 25) {
-    counter = 0;
-    Serial.println();
-  }
-
   // Are we playing a sound file?
   if (musicPlayer.stopped()) {
     // No, then start a sound file
@@ -197,6 +188,16 @@ void loop() {
 
   // https://forums.adafruit.com/viewtopic.php?p=953823&hilit=music+maker+esp32#p953823
   musicPlayer.feedBuffer();
+
+    // print a dot so we can tell the loop is executing
+  Serial.print(".");
+  // put a blank line every 25 periods
+  counter += 1;
+  if (counter > 25) {
+    counter = 0;
+    Serial.println();
+  }
+
   delay(100);
 }
 
@@ -223,5 +224,4 @@ void printDirectory(File dir, int numTabs) {
     entry.close();
   }
 }
-
 ```
