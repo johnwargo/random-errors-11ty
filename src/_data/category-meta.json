@@ -10,6 +10,11 @@
     "description": "Topics related to Content Management Systems."
   },
   {
+    "category": "ESP32",
+    "count": 1,
+    "description": ""
+  },
+  {
     "category": "Eleventy",
     "count": 7,
     "description": "Topics related to the Eleventy static site generator."

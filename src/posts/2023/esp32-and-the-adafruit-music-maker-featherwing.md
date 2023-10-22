@@ -3,6 +3,7 @@ title: ESP32 and the Adafruit Music Maker FeatherWing
 date: 2023-10-21
 categories:
   - IoT
+  - ESP32
 tags: post
 ---
 
