@@ -6,8 +6,8 @@ categories:
 tags: post
 ---
 
-Music Maker FeatherWing and ESP32
 I added the Music Maker FeatherWing to a ESP32 Feather V2 device and I’m following the instructions in the tutorial to run the feather_player sample sketch. I put some music files on the memory card, inserted it in the memory card holder then changed the file names in the sketch so it plays the sound files I have on the memory card. 
+
 When I run the sketch, it displays the memory card file list as expected, loads the first sound file (snore01.mp3 in this case), then immediately panics as shown below:
 
 ```
