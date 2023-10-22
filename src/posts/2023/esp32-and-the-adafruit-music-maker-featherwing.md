@@ -10,7 +10,7 @@ I added the Music Maker FeatherWing to a ESP32 Feather V2 device and I’m follo
 
 When I run the sketch, it displays the memory card file list as expected, loads the first sound file (snore01.mp3 in this case), then immediately panics as shown below:
 
-```
+```text
 Adafruit VS1053 Feather Test
 VS1053 found
 SD OK!
