@@ -3,6 +3,7 @@ title: ESP32 Task Watchdog Got Triggered
 date: 2023-08-15
 categories:
   - IoT
+  - ESP32
 tags: post
 ---
 
