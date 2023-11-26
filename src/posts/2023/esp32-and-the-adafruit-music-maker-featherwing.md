@@ -43,7 +43,7 @@ Now, with that in mind, I went back to the tutorial and noticed something I miss
 
 > `Interrupt based playback currently does not work on ESP32 platforms`
 
-So apparently this board doesn’t work with ESP32 using interrupts, but there’s no information in the tutorial that tells me what this means. I took a look at the library source and API docs and I don’t see anything there that tells me how to play sounds through this board on an ESP32 without using interrupts. After perusing the Adafruit Forums, I finally found the solution to my problem in [ESP32 Feather V2 with Music Maker FeatherWing](https://forums.adafruit.com/viewtopic.php?p=953823&hilit=music+maker+esp32#p953823){target="_blank"}:
+So apparently this board doesn’t work with ESP32 using interrupts, but there’s no information in the tutorial that tells me what this means. I took a look at the library source and API docs and I don’t see anything there that tells me how to play sounds through this board on an ESP32 without using interrupts. After perusing the Adafruit Forums, I finally found the solution to my problem in [ESP32 Feather V2 with Music Maker FeatherWing](https://forums.adafruit.com/viewtopic.php?p=949364&sid=f94be453911b5999954fb2cfb572ffd2#p949364){target="_blank"}:
 
 >The VS1053 has an output pin that it sets high when its input buffer starts to run low.
 >The VS1053 library has a function named `.feed_buffer()` that checks the pin and sends the VS1053 more data if necessary.
