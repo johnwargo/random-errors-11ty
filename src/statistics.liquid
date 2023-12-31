@@ -7,21 +7,12 @@ layout: default
 <h3>Statistics</h3>
 
 {% if collections.postStats.postCount > 0 %}
+
+  <p>Statistics generated using the
+  <a href="https://github.com/johnwargo/eleventy-plugin-post-stats" target="_blank">Eleventy Plugin Post Statistics</a>
+  plugin.</p>
+
   <ul>
-    <li>
-      <strong>Post Count:</strong>
-      {{ collections.postStats.postCount | commaize }}</li>
-    <li>
-      <strong>Average days between posts:</strong>
-      {{ collections.postStats.avgDays | commaize }}</li>
-    <li>
-      <strong>First Post:</strong>
-      {{ collections.postStats.firstPostDate | readableDate }}
-    </li>
-    <li>
-      <strong>Last Post:</strong>
-      {{ collections.postStats.lastPostDate | readableDate }}
-    </li>
     <li>
       <strong>Deployments:</strong>
       {{ buildinfo.buildCounter | commaize }}
@@ -38,97 +29,109 @@ layout: default
       <strong>Generator:</strong>
       <a href="https://www.11ty.dev/" target="_blank">{{ eleventyinfo.generatorStr }}</a>
     </li>
+    <li>
+      <strong>First Post:</strong>
+      {{ collections.postStats.firstPostDate | readableDate }}
+    </li>
+    <li>
+      <strong>Last Post:</strong>
+      {{ collections.postStats.lastPostDate | readableDate }}
+    </li>
+    <li>
+      <strong>Post Count:</strong>
+      {{ collections.postStats.postCount | commaize }}
+    </li>
+    <li>
+      <strong>Average posts per year:</strong>
+      {{ collections.postStats.avgPostsPerYear | commaize }}
+    </li>
+    <li>
+      <strong>Average days between posts:</strong>
+      {{ collections.postStats.avgDays | commaize }}
+    </li>
+    <li>
+      <strong>Average characters per post:</strong>
+      {{ collections.postStats.avgCharacterCount | commaize }}
+    </li>
+    <li>
+      <strong>Average words per post:</strong>
+      {{ collections.postStats.avgWordCount | commaize }}
+    </li>
+    <li>
+      <strong>Average paragraphs per post:</strong>
+      {{ collections.postStats.avgParagraphCount | commaize }}
+    </li>
+    {%- if collections.postStats.avgCodeBlockCount > 0 -%}
+      <li>
+        <strong>Average code blocks per post:</strong>
+        {{ collections.postStats.avgCodeBlockCount | commaize }}
+      </li>
+    {% endif %}
   </ul>
 
-  <h3>Posts by Year</h3>
-
-  <style>
-    table,
-    th,
-    td {
-      width: 300px;
-      text-align: center;
-    }
-
-    .chart-container {
-      max-width: 1280px;
-    }
-  </style>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Year</th>
-        <th>Count</th>
-        <th>Avg. Days Between Posts</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for year in collections.postStats.years %}
-        <tr>
-          <td>{{ year.year }}</td>
-          <td>{{ year.postCount | commaize }}</td>
-          <td>{{ year.avgDays | commaize }}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-
-  <div class="chart-container">
-    <canvas id="statsChart"></canvas>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    const ctx = document.getElementById('statsChart');
-    new Chart(ctx, {
-      data: {
-        labels: [{% for year in collections.postStats.years %}'{{ year.year }}'{%- unless forloop.last %},{% endunless %}{% endfor %}],
-      datasets: [
-        {
-          type: 'bar',
-          label: 'Number of Posts',
-          data: [{% for year in collections.postStats.years %}{{ year.postCount }}{%- unless forloop.last %},{% endunless %}{% endfor %}],
-          borderWidth: 1,
-          order: 1
-        }, {
-          type: 'line',
-          label: 'Yearly Average Number of Days Between Posts',
-          data: [{% for year in collections.postStats.years %}{{ year.avgDays }}{%- unless forloop.last %},{% endunless %}{% endfor %}],
-          lineTension: 0.8,
-          order: 2
-        }, {
-          type: 'line',
-          label: 'Site Average Number of Days Between Posts',
-          data: [{% for year in collections.postStats.years %}{{ collections.postStats.avgDays }}{%- unless forloop.last %},{% endunless %}{% endfor %}],
-          lineTension: 0.8,
-          order: 3
-        }
-      ]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: 'Number of Posts'
-          }
-        },
-        x: {
-          title: {
-            display: true,
-            text: 'Post Year'
-          }
-        }
-      }
-    }
-  });
-  </script>
+<div id="statsChart1"></div>
 
 {% else %}
-  <p>
-    <strong>No data to display</strong>
-  </p>
-
+  <p><strong>No data to display</strong></p>
 {% endif %}
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script>
+  var options1 = {
+    chart: { type: 'line' },
+    title: { text: 'Post Count & Frequency' },
+    series: [
+      {
+        type: 'column',
+        name: 'Number of Posts',
+        data: [{% for year in collections.postStats.years %}{{ year.postCount }}{%- unless forloop.last -%}, {% endunless %} {% endfor %}] 
+      }, {
+        type: 'line',
+        name: 'Average Days Between Posts',
+        data: [{% for year in collections.postStats.years %}{{ year.avgDays }}{%- unless forloop.last -%}, {% endunless %}{% endfor %}] 
+      },       
+      {
+        type: 'line',
+        name: 'Site Average Days Between Posts',
+        data: [{% for year in collections.postStats.years %}{{ collections.postStats.avgDays | commaize }}{%- unless forloop.last -%}, {% endunless %}{% endfor %}] 
+      },
+      {
+        type: 'line',
+        name: 'Site Average Posts/Year',
+        data: [{% for year in collections.postStats.years %}{{ collections.postStats.avgPostsPerYear | commaize }}{%- unless forloop.last -%}, {% endunless %}{% endfor %}] 
+      }
+    ],
+    dataLabels: { enabled: true, enabledOnSeries: [0, 1] },
+    stroke: { curve: 'smooth' },
+    xaxis: {
+      categories: [{% for year in collections.postStats.years %}'{{ year.year }}'{%- unless forloop.last -%}, {% endunless %}{% endfor %}]
+    }
+  }
+  var chart1 = new ApexCharts(document.querySelector("#statsChart1"), options1);
+  chart1.render();
+
+  var options2 = {
+    chart: { type: 'line' },
+    title: { text: 'Content Stats (Part 1)' },
+    series: [
+      {
+        type: 'column',
+        name: 'Avg. Characters per Post',
+        data: [{% for year in collections.postStats.years %}{{ year.avgCharacterCount | truncate }}{%- unless forloop.last -%}, {% endunless %}{% endfor %}] 
+      }, {
+    type: 'line',
+      name: 'Avg. Words per Post',
+        data: [{% for year in collections.postStats.years %}{{ year.avgWordCount | truncate }}{%- unless forloop.last -%}, {% endunless %}{% endfor %}] 
+      }
+    ],
+    dataLabels: {
+    enabled: true,
+      enabledOnSeries: [0, 1]
+    },
+    stroke: { curve: 'smooth' },
+    xaxis: {
+      categories: [{% for year in collections.postStats.years %}'{{ year.year }}'{%- unless forloop.last -%}, {% endunless %}{% endfor %}]
+    }
+  }  
+
+</script>
