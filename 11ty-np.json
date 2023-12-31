@@ -2,5 +2,7 @@
   "postsFolder": "src/posts",
   "templateFile": "11ty-np.md",
   "useYear": true,
-  "paragraphCount": 4
+  "paragraphCount": 4,
+  "openAfterCreate": true,
+  "editorCmd": "code"
 }
