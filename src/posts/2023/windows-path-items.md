@@ -1,5 +1,5 @@
 ---
-title: Windows Path Items Not Avialable in Visual Studio Code
+title: Windows Path Items Not Available in Visual Studio Code
 date: 2023-12-31
 categories:
   - Windows
