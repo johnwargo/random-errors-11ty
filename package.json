@@ -1,6 +1,6 @@
 {
   "name": "random-errors-11ty",
-  "version": "0.0.11",
+  "version": "0.0.10",
   "description": "Publishing solutions for random errors I encounter when writing code.",
   "author": "John M. Wargo",
   "license": "MIT",
@@ -21,8 +21,8 @@
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-    "eleventy-generate-category-pages": "^0.0.8",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "eleventy-generate-category-pages": "^0.1.2",
     "eleventy-plugin-date": "^1.0.0",
     "eleventy-plugin-post-stats": "^0.2.11",
     "generate-build-info": "^0.0.3",
