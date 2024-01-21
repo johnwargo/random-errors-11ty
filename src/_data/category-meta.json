@@ -10,6 +10,11 @@
     "description": "Topics related to Content Management Systems."
   },
   {
+    "category": "Delphi",
+    "count": 1,
+    "description": ""
+  },
+  {
     "category": "ESP32",
     "count": 3,
     "description": ""
@@ -56,7 +61,7 @@
   },
   {
     "category": "Windows",
-    "count": 1,
+    "count": 2,
     "description": ""
   }
 ]

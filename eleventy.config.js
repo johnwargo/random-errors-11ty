@@ -99,13 +99,13 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPassthroughCopy({ 'src/favicon/*': '/' });
 
 	eleventyConfig.addPassthroughCopy("src/_data/*");
-	eleventyConfig.addPassthroughCopy("src/assets/css/*");
-	eleventyConfig.addPassthroughCopy("src/assets/js/*");
-	eleventyConfig.addPassthroughCopy("src/assets/sass/*");
-	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
-	// Images folders, assumes cascading folders per year
-	eleventyConfig.addPassthroughCopy("src/images/*");
-	eleventyConfig.addPassthroughCopy("src/images/2023/*.jpg");
+	eleventyConfig.addPassthroughCopy("src/assets/");
+	// eleventyConfig.addPassthroughCopy("src/assets/css/*");
+	// eleventyConfig.addPassthroughCopy("src/assets/js/*");
+	// eleventyConfig.addPassthroughCopy("src/assets/sass/*");
+	// eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
+	// // Images folders, assumes cascading folders per year
+	eleventyConfig.addPassthroughCopy("src/images/");
 
 	// Only minify HTML if we are in production because it slows builds
 	if (isProduction) {

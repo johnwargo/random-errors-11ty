@@ -1,5 +1,7 @@
 #!/usr/bin/env zx
 
+const algoliaPrefix = 'RE_';
+
 async function gitUpdate(msg) {
   await $`git add -A`;
   await $`git commit -m ${msg}`;
@@ -59,7 +61,7 @@ await $`eleventy`;
 
 if (updateIndex) {
   console.log('\nUpdating Algolia Index');
-  await $`algolia-idxup _site/algolia.json RE_`;
+  await $`algolia-idxup _site/algolia.json ${algoliaPrefix} -f ../algolia-creds.json`;
 }
 
 await gitUpdate(theArgs[0]);
