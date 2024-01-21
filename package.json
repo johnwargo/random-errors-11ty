@@ -24,7 +24,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "eleventy-generate-category-pages": "^0.0.8",
     "eleventy-plugin-date": "^1.0.0",
-    "eleventy-plugin-post-stats": "^0.1.1",
+    "eleventy-plugin-post-stats": "^0.2.11",
     "generate-build-info": "^0.0.3",
     "html-minifier": "^4.0.0",
     "markdown-it-attrs": "^4.1.6",
