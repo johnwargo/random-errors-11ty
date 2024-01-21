@@ -8,6 +8,9 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginStats = require('eleventy-plugin-post-stats');
 
+// local plugins
+const pluginImages = require("./eleventy.config.images.js");
+
 // Transforms
 // https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
 const htmlMinTransform = require('./src/transforms/html-min.js');
@@ -18,6 +21,7 @@ const isProduction = process.env.RUNTIME_ENV === 'production';
 module.exports = eleventyConfig => {
 
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+	eleventyConfig.addPlugin(pluginImages, { debugMode: false });
 	eleventyConfig.addPlugin(pluginDate);
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(syntaxHighlight);

@@ -46,7 +46,7 @@ Logger.log("Selected Date: " + startDate.toDateString());
 
 But when I looked at the output, the date object showed yesterday's date. I had no idea what was going on here as I was fairly certain today wasn't yesterday. I poked and prodded this for a while and eventually found a site called [current millis](https://currentmillis.com/){target="_blank"} that (sort of) gave me the answer. When I pasted in the date value I got from my app's logs (in milliseconds) it showed me that the date object pointed to midnight today, as expected since this was a Date instead of a Date/Time. But the value is in UTC, so midnight this morning UTC, is actually 9 PM yesterday in my local time zone (UTC - 5) - see the results highlighted in the image below.
 
-![Current Millis Site](/images/current-millis.png)
+{% image "src/images/current-millis.png", "Current Millis Site", "image-full" %}
 
 The simple solution was to add the UTC time offset to the Date object, and that transformed it to midnight (morning) my time - which is TODAY!!
 
