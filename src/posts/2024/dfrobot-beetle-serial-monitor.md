@@ -13,6 +13,8 @@ I scratched my head for a while and couldn't figure it out. Right before I pulle
 
 > And always set the USB CDC as Enable
 
-I had no idea what USB CDC was, so I had to [look it up](https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/api/usb_cdc.html){target="_blank"} but when I checked in the IDE, that setting was disabled. 
+I also found this requirement in the [wiki](https://wiki.dfrobot.com/SKU_DFR0868_Beetle_ESP32_C3){target="_blank"}. 
+
+I had no idea what USB CDC was, so I had to [look it up](https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/guides/tools_menu.html#:~:text=USB%20CDC%20On%20Boot,-The%20USB%20Communications&text=This%20option%20can%20be%20used%20to%20Enable%20or%20Disable%20this,port%20for%20flashing%20the%20device.){target="_blank"} but when I checked in the IDE, that setting was disabled. 
 
 I enabled it, but then my Windows system started acting weird. I rebooted the system, fired up the IDE and everything worked as expected. Problem solved. 
