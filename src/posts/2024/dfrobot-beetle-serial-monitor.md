@@ -2,6 +2,7 @@
 title: DFRobot Beetle Won't Write to Serial Monitor
 date: 2024-04-14
 categories:
+  - ESP32
   - IoT
 tags: post
 timestamp: 2024-04-14T12:57:53.707Z
