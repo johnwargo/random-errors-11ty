@@ -44,6 +44,6 @@ When hosting the PWA in a folder on my server, I did the following:
 "scope": "/myapp/",
 ```
 
-With that in place, it works great; you can see the final version on the (currently incomplete) [PWA Learn](https://pwalearn.com/tipcalc/){target="_blank"} web site.
+With that in place, it works great; you can see the final version on the (currently incomplete) [Learning PWA](https://learningpwa.com/tipcalc/){target="_blank"} web site.
 
 Google's [Web Manifest documentation](https://developers.google.com/web/fundamentals/web-app-manifest/){target="_blank"} has this type of configuration in its sample manifest file.
