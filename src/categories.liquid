@@ -9,7 +9,7 @@ layout: default
 
 {% for catData in categories %}
   <p>
-    <a href="{{ "/" | htmlBaseUrl }}categories/{{ catData.category | slugify }}">{{ catData.category }}</a>
+    <a href="{{ "/" | htmlBaseUrl }}categories/{{ catData.category | slugify }}/">{{ catData.category }}</a>
     ({{ catData.count }} posts)
     {% if catData.description %}
       <br/>
