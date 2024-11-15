@@ -13,7 +13,7 @@ Based on: https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
 + Source: [Github](https://github.com/johnwargo/random-errors-11ty)
 + Hosting: [Netlify](https://app.netlify.com/sites/randomerrors/overview)
 + Backdoor Access: [Random Errors](https://randomerrors.netlify.app/)
-+ Email Obfuscator: http://www.wbwip.com/wbw/emailencoder.html
++ Email Obfuscator: https://www.wbwip.com/wbw/emailencoder.html
 
 Search Page shamelessly stolen from Ray Camden:  https://github.com/cfjedimaster/raymondcamden2020/blob/master/search.liquid
 
