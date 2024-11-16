@@ -1,15 +1,15 @@
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
 const { generateCategoryPages } = require('eleventy-generate-category-pages');
 // https://github.com/11ty/eleventy/issues/2301
-const markdownIt = require("markdown-it");
-const markdownItAttrs = require("markdown-it-attrs");
-const pluginDate = require("eleventy-plugin-date");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const markdownIt = require('markdown-it');
+const markdownItAttrs = require('markdown-it-attrs');
+const pluginDate = require('eleventy-plugin-date');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginStats = require('eleventy-plugin-post-stats');
 
 // local plugins
-const pluginImages = require("./eleventy.config.images.js");
+const pluginImages = require('./eleventy.config.images.js');
 
 // Transforms
 // https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
@@ -35,9 +35,9 @@ module.exports = eleventyConfig => {
 	};
 	const markdownLib = markdownIt(mdOptions)
 		.use(markdownItAttrs)
-		.disable("code");
+		.disable('code');
 
-	eleventyConfig.setLibrary("md", markdownLib);
+	eleventyConfig.setLibrary('md', markdownLib);
 
 	var firstRun = true;
 	eleventyConfig.on('eleventy.before', async ({ dir, runMode, outputMode }) => {
@@ -58,7 +58,7 @@ module.exports = eleventyConfig => {
 		return post.templateContent;
 	}
 
-	eleventyConfig.addCollection("categories", function (collectionApi) {
+	eleventyConfig.addCollection('categories', function (collectionApi) {
 		let categories = new Set();
 		let posts = collectionApi.getFilteredByTag('post');
 		posts.forEach(p => {
@@ -68,7 +68,7 @@ module.exports = eleventyConfig => {
 		return Array.from(categories);
 	});
 
-	eleventyConfig.addFilter("filterByCategory", function (posts, cat) {
+	eleventyConfig.addFilter('filterByCategory', function (posts, cat) {
 		// case matters, so let's lowercase the desired category, cat	and we will 
 		// lowercase our posts categories as well
 		cat = cat.toLowerCase();
@@ -94,21 +94,21 @@ module.exports = eleventyConfig => {
 		return JSON.stringify(variable);
 	});
 
-	eleventyConfig.addFilter("commaize", function (num) {
-		return parseFloat(num).toLocaleString("en-us");
+	eleventyConfig.addFilter('commaize', function (num) {
+		return parseFloat(num).toLocaleString('en-us');
 	});
 
 	// https://www.lenesaile.com/en/blog/organizing-the-eleventy-config-file/
 	// Copy the favicon files to the root folder
 	eleventyConfig.addPassthroughCopy({ 'src/favicon/*': '/' });
 
-	eleventyConfig.addPassthroughCopy("src/_data/*");
-	eleventyConfig.addPassthroughCopy("src/assets/*");
-	eleventyConfig.addPassthroughCopy("src/assets/css/*");
-	eleventyConfig.addPassthroughCopy("src/assets/js/*");
-	eleventyConfig.addPassthroughCopy("src/assets/sass/*");
-	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
-	eleventyConfig.addPassthroughCopy("src/images/");
+	eleventyConfig.addPassthroughCopy('src/_data/*');
+	eleventyConfig.addPassthroughCopy('src/assets/*');
+	eleventyConfig.addPassthroughCopy('src/assets/css/*');
+	eleventyConfig.addPassthroughCopy('src/assets/js/*');
+	eleventyConfig.addPassthroughCopy('src/assets/sass/*');
+	eleventyConfig.addPassthroughCopy('src/assets/webfonts/*');
+	eleventyConfig.addPassthroughCopy('src/images/');
 
 	// Only minify HTML if we are in production because it slows builds
 	if (isProduction) {
@@ -118,10 +118,10 @@ module.exports = eleventyConfig => {
 	return {
 		dir: {
 			input: 'src',
-			output: "_site",
-			includes: "_includes",
-			layouts: "_layouts",
-			data: "_data"
+			output: '_site',
+			includes: '_includes',
+			layouts: '_layouts',
+			data: '_data'
 		}
 	}
 
