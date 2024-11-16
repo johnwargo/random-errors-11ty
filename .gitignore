@@ -2,6 +2,8 @@
 node_modules/
 _site/
 px-txt-html/
+
 # Files
 package-lock.json
 px-txt-html.zip
+link-checker-results.md

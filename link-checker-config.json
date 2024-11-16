@@ -1,0 +1,11 @@
+{
+  "siteUrl": "https://randomerrors.dev/",
+  "concurrentRequests": 10,
+  "timeoutValue": 5000,
+  "outputOptions": [
+    "BROKEN"
+  ],
+  "saveToFile": true,
+  "outputFile": "link-checker-results",
+  "outputType": 1
+}
