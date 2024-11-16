@@ -45,6 +45,11 @@
     "description": "Topics related to application development using the Ionic framework."
   },
   {
+    "category": "Node.js",
+    "count": 2,
+    "description": ""
+  },
+  {
     "category": "Static Site Generators",
     "count": 1,
     "description": ""

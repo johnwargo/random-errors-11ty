@@ -1,0 +1,33 @@
+---js
+{
+  "layout": "default",
+  "pagination": {
+    "data": "collections.post",
+    "size": 20,
+    "alias": "catposts",
+    "reverse": true,
+    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('Node.js')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
+  },
+  "category": "Node.js",
+  "eleventyComputed": {
+    "title": "Category: {{ category }}"
+  },
+  "permalink": "categories/{{ category | slugify }}/{% if pagination.pageNumber != 0 %}page-{{ pagination.pageNumber }}/{% endif %}",
+  "description": "Topics related to application development using the Ionic framework."
+}
+---
+
+<h3>Category: {{ category }}</h3>
+
+{% include 'pagination-count.html' %}
+
+<p>All posts for the {{ category }} category, in reverse chronological order.</p>
+
+{% for post in catposts reversed %}
+  <div>
+    <a href="{{post.url}}">{{ post.data.title }}</a>, posted {{ post.date | readableDate }}
+    {% excerpt post %}
+  </div>
+{% endfor %}
+
+{% include 'pagination-nav.html' %}
