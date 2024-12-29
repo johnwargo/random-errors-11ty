@@ -35,6 +35,7 @@ Search Page shamelessly stolen from Ray Camden:  https://github.com/cfjedimaster
 * [x] Minification - https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
 * [x] Fix Case issue for tags (no lowercase)
 * [x] Add statistics page
+* [ ] Add manifest
 * [ ] Add image shortcode and update pictures
 * [ ] Add description field to posts
 * [ ] Rebuild search form (no Vue)

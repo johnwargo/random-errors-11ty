@@ -9,170 +9,123 @@ siteTitle: Random Errors
 TXT by Pixelarity
 pixelarity.com | hello@pixelarity.com
 License: pixelarity.com/license
---><html>
-  <head>
-    <title>{{ siteTitle }}</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+-->
+<html>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8870627-33"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'UA-8870627-33');
-    </script>
-    <!-- Google tag (gtag.js) -->
+<head>
+  <title>{{ siteTitle }}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="generator" content="{{ eleventyinfo.generatorStr }}" />
+  <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/main.css" />
+  <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/scott.css" />
+  <link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism-twilight.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/x-icon" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/x-icon" href="/favicon-96x96.png" sizes="96x96">
+  {% include "google-analytics.html" %}
+</head>
 
-    <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/main.css" />
-    <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/scott.css" />
-    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism-twilight.css">
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/favicon.ico">
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/favicon-16x16.png"
-      sizes="16x16">
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/favicon-32x32.png"
-      sizes="32x32">
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/favicon-96x96.png"
-      sizes="96x96">
-  </head>
-  <body class="is-preload">
-    <div id="page-wrapper">
-
-      <header id="header">
-        <div class="logo container">
-          <div>
-            <h1>
-              <a href="{{ "/" | htmlBaseUrl }}" id="logo">{{ siteTitle }}</a>
-            </h1>
-          </div>
+<body class="is-preload">
+  <div id="page-wrapper">
+    <header id="header">
+      <div class="logo container">
+        <div>
+          <h1>
+            <a href="{{ "/" | htmlBaseUrl }}" id="logo">{{ siteTitle }}</a>
+          </h1>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <nav id="nav">
-        <ul>
-          <li><a href="{{ "/" | htmlBaseUrl }}">Home</a></li>
-          <li><a href="{{ "/" | htmlBaseUrl }}categories/">Categories</a></li>
-          <li><a href="{{ "/" | htmlBaseUrl }}search/">Search</a></li>
-          <li><a href="{{ "/" | htmlBaseUrl }}about/">About</a></li>          
-          <li><a href="{{ "/" | htmlBaseUrl }}statistics/">Statistics</a></li>
-          <li><a href="https://github.com/johnwargo/random-errors-11ty" target="_blank">Source Code</a></li>
-        </ul>
-      </nav>
+    {% include "nav.html" %}
 
-      <section id="main">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="content">
-                <article class="box page-content">
-                  {{ content }}
-                </article>
-              </div>
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="content">
+              <article class="box page-content">
+                {{ content }}
+              </article>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <footer id="footer">
-        <div class="container">
-          <div class="row gtr-200">
-            <div class="col-12">
-              <section>
-                <h2 class="major">
-                  <span>Get in touch</span>
-                </h2>
-                <ul class="contact">
-                  <li>
-                    <a
-                      class="icon fa-envelope"
-                      href="mailto:&#106;&#111;&#104;&#110;&#064;&#106;&#111;&#104;&#110;&#119;&#097;&#114;&#103;&#111;&#046;&#099;&#111;&#109;"
-                      target="_blank">
-                      <span class="label">Github Personal</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="icon brands fa-github"
-                      href="https://github.com/johnwargo"
-                      target="_blank">
-                      <span class="label">Github Personal</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="icon brands fa-github"
-                      href="https://github.com/jwargo"
-                      target="_blank">
-                      <span class="label">Github Professional</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="icon brands fa-medium"
-                      href="https://johnwargo.medium.com/"
-                      target="_blank">
-                      <span class="label">Medium</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="icon brands fa-linkedin-in"
-                      href="https://www.linkedin.com/in/jmwargo/"
-                      target="_blank">
-                      <span class="label">LinkedIn</span>
-                    </a>
-                  </li>                  
-                  <li>
-                    <a
-                      class="icon brands fa-mastodon"
-                      href="https://mastodon.social/@johnwargo"
-                      target="_blank">
-                      <span class="label">Mastodon</span>
-                    </a>
-                  </li>
-                </ul>
-              </section>
+    <footer id="footer">
+      <div class="container">
+        <div class="row gtr-200">
+          <div class="col-12">
+            <section>
+              <h2 class="major">
+                <span>Get in touch</span>
+              </h2>
+              <ul class="contact">
+                <li>
+                  <a class="icon fa-envelope"
+                    href="mailto:&#106;&#111;&#104;&#110;&#064;&#106;&#111;&#104;&#110;&#119;&#097;&#114;&#103;&#111;&#046;&#099;&#111;&#109;"
+                    target="_blank">
+                    <span class="label">Github Personal</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="icon brands fa-github" href="https://github.com/johnwargo" target="_blank">
+                    <span class="label">Github Personal</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="icon brands fa-github" href="https://github.com/jwargo" target="_blank">
+                    <span class="label">Github Professional</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="icon brands fa-medium" href="https://johnwargo.medium.com/" target="_blank">
+                    <span class="label">Medium</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/jmwargo/" target="_blank">
+                    <span class="label">LinkedIn</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="icon brands fa-mastodon" href="https://mastodon.social/@johnwargo" target="_blank">
+                    <span class="label">Mastodon</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
 
-            </div>
           </div>
-
-          <div id="copyright">
-            <ul class="menu">
-              <li>&copy;
-                <a href="https://johnwargo.com/" target="_blank">John M. Wargo</a>; All rights reserved</li>
-              <li>Powered by
-                <a href="https://www.11ty.dev/" target="_blank">{{ eleventyinfo.generatorStr }}</a>
-              </li>
-            </ul>
-          </div>
-
         </div>
-      </footer>
 
-    </div>
+        <div id="copyright">
+          <ul class="menu">
+            <li>&copy;
+              <a href="https://johnwargo.com/" target="_blank">John M. Wargo</a>; All rights reserved
+            </li>
+            <li>Powered by
+              <a href="https://www.11ty.dev/" target="_blank">{{ eleventyinfo.generatorStr }}</a>
+            </li>
+          </ul>
+        </div>
 
-    <script src="{{ "/" | htmlBaseUrl }}assets/js/jquery.min.js"></script>
-    <script src="{{ "/" | htmlBaseUrl }}assets/js/jquery.dropotron.min.js"></script>
-    <script src="{{ "/" | htmlBaseUrl }}assets/js/jquery.scrolly.min.js"></script>
-    <script src="{{ "/" | htmlBaseUrl }}assets/js/browser.min.js"></script>
-    <script src="{{ "/" | htmlBaseUrl }}assets/js/breakpoints.min.js"></script>
-    <script src="{{ "/" | htmlBaseUrl }}assets/js/util.js"></script>
-    <script src="{{ "/" | htmlBaseUrl }}assets/js/main.js"></script>
+      </div>
+    </footer>
 
-  </body>
+  </div>
+
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/jquery.min.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/jquery.dropotron.min.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/jquery.scrolly.min.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/browser.min.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/breakpoints.min.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/util.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/main.js"></script>
+
+</body>
+
 </html>

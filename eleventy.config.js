@@ -8,11 +8,11 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginStats = require('eleventy-plugin-post-stats');
 
+// upgrade helper
+const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
+
 // local plugins
 const pluginImages = require('./eleventy.config.images.js');
-
-// Transforms
-// https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
 const htmlMinTransform = require('./src/transforms/html-min.js');
 
 // Create a helpful production flag
@@ -26,6 +26,8 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(syntaxHighlight);
 	eleventyConfig.addPlugin(pluginStats);
+	// upgrade helper
+	eleventyConfig.addPlugin(UpgradeHelper);
 
 	// https://github.com/11ty/eleventy/issues/2301
 	const mdOptions = {
