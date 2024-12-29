@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	title: "Random Errors",
 	url: "https://randomerrors.dev/",
 	language: "en",

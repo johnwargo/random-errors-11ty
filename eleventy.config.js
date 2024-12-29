@@ -1,24 +1,23 @@
-const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
-const { generateCategoryPages } = require('eleventy-generate-category-pages');
-// https://github.com/11ty/eleventy/issues/2301
-const markdownIt = require('markdown-it');
-const markdownItAttrs = require('markdown-it-attrs');
-const pluginDate = require('eleventy-plugin-date');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const pluginStats = require('eleventy-plugin-post-stats');
+import { EleventyHtmlBasePlugin } from '@11ty/eleventy';
+import { generateCategoryPages } from 'eleventy-generate-category-pages';
+import markdownIt from 'markdown-it';
+import markdownItAttrs from 'markdown-it-attrs';
+import pluginDate from 'eleventy-plugin-date';
+import pluginRss from '@11ty/eleventy-plugin-rss';
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
+import pluginStats from 'eleventy-plugin-post-stats';
 
 // upgrade helper
-const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
+import UpgradeHelper from '@11ty/eleventy-upgrade-help';
 
 // local plugins
-const pluginImages = require('./eleventy.config.images.js');
-const htmlMinTransform = require('./src/transforms/html-min.js');
+import pluginImages from './eleventy.config.images.js';
+import htmlMinTransform from './src/transforms/html-min.js';
 
 // Create a helpful production flag
 const isProduction = process.env.RUNTIME_ENV === 'production';
 
-module.exports = eleventyConfig => {
+export default function(eleventyConfig) {
 
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginImages, { debugMode: false });
@@ -103,7 +102,6 @@ module.exports = eleventyConfig => {
 	// https://www.lenesaile.com/en/blog/organizing-the-eleventy-config-file/
 	// Copy the favicon files to the root folder
 	eleventyConfig.addPassthroughCopy({ 'src/favicon/*': '/' });
-
 	eleventyConfig.addPassthroughCopy('src/_data/*');
 	eleventyConfig.addPassthroughCopy('src/assets/*');
 	eleventyConfig.addPassthroughCopy('src/assets/css/*');

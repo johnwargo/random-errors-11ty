@@ -2,6 +2,7 @@
   "name": "random-errors-11ty",
   "version": "0.0.12",
   "description": "Publishing solutions for random errors I encounter when writing code.",
+  "type": "module",
   "author": "John M. Wargo",
   "license": "MIT",
   "repository": {

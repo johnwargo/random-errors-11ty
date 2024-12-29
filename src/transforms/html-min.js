@@ -1,7 +1,7 @@
 // https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
-const htmlmin = require('html-minifier');
+import htmlmin from 'html-minifier';
 
-module.exports = (value, outputPath) => {
+export default function (value, outputPath) {
   if (outputPath && outputPath.indexOf('.html') > -1) {
     return htmlmin.minify(value, {
       useShortDoctype: true,
