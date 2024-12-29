@@ -7,9 +7,6 @@ import pluginRss from '@11ty/eleventy-plugin-rss';
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import pluginStats from 'eleventy-plugin-post-stats';
 
-// upgrade helper
-import UpgradeHelper from '@11ty/eleventy-upgrade-help';
-
 // local plugins
 import pluginImages from './eleventy.config.images.js';
 import htmlMinTransform from './src/transforms/html-min.js';
@@ -18,15 +15,12 @@ import htmlMinTransform from './src/transforms/html-min.js';
 const isProduction = process.env.RUNTIME_ENV === 'production';
 
 export default function(eleventyConfig) {
-
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginImages, { debugMode: false });
 	eleventyConfig.addPlugin(pluginDate);
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(syntaxHighlight);
 	eleventyConfig.addPlugin(pluginStats);
-	// upgrade helper
-	eleventyConfig.addPlugin(UpgradeHelper);
 
 	// https://github.com/11ty/eleventy/issues/2301
 	const mdOptions = {

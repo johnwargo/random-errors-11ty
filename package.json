@@ -24,7 +24,6 @@
     "@11ty/eleventy-img": "^3.1.8",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@11ty/eleventy-upgrade-help": "^3.0.1",
     "eleventy-generate-category-pages": "^0.1.2",
     "eleventy-plugin-date": "^1.0.0",
     "eleventy-plugin-post-stats": "^0.2.11",
