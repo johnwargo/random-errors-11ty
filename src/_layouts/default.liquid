@@ -16,7 +16,7 @@ License: pixelarity.com/license
   <title>{{ siteTitle }}</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="generator" content="{{ eleventyinfo.generatorStr }}" />
+  <meta name="generator" content="{{ eleventy.generator }}">
   <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/main.css" />
   <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/scott.css" />
   <link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism-twilight.css">
@@ -108,7 +108,7 @@ License: pixelarity.com/license
               <a href="https://johnwargo.com/" target="_blank">John M. Wargo</a>; All rights reserved
             </li>
             <li>Powered by
-              <a href="https://www.11ty.dev/" target="_blank">{{ eleventyinfo.generatorStr }}</a>
+              <a href="https://www.11ty.dev/" target="_blank">{{ eleventy.generator }}</a>
             </li>
           </ul>
         </div>
