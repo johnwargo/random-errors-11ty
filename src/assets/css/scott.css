@@ -9,3 +9,7 @@
 .image-full {
   max-width:100%;
 }
+
+pre[class*="language-"] {
+  margin: .5em 0 1em;
+}
