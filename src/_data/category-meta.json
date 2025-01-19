@@ -36,7 +36,7 @@
   },
   {
     "category": "IoT",
-    "count": 6,
+    "count": 7,
     "description": "Topics related to the Internet of Things (IoT)."
   },
   {
@@ -47,6 +47,11 @@
   {
     "category": "Node.js",
     "count": 2,
+    "description": ""
+  },
+  {
+    "category": "Particle Platform",
+    "count": 1,
     "description": ""
   },
   {
