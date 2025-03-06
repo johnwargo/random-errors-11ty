@@ -12,6 +12,7 @@ I'm doing some Arduino development for a friend, helping him build a throttle ga
 ```c
 #define NUM_LEDS 7
 const int divisor = 4095;   // for ESP32 devices
+int numIlluminatedPixels;
 int throttleValue;
 
 numIlluminatedPixels = (throttleValue / divisor) * NUM_LEDS;
@@ -27,6 +28,7 @@ The solution is that I have to force (cast) my division operands to `float` valu
 #define NUM_LEDS 7
 const int divisor = 4095;   // for ESP32 devices
 int throttleValue;
+int numIlluminatedPixels;
 
 numIlluminatedPixels = ((float)throttleValue / (float)divisor) * NUM_LEDS;
 ```
