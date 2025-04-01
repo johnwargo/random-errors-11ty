@@ -6,14 +6,14 @@
     "size": 20,
     "alias": "catposts",
     "reverse": true,
-    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('Delphi')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
+    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories && item.data.categories.includes('Delphi')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
   },
   "category": "Delphi",
   "eleventyComputed": {
     "title": "Category: {{ category }}"
   },
   "permalink": "categories/{{ category | slugify }}/{% if pagination.pageNumber != 0 %}page-{{ pagination.pageNumber }}/{% endif %}",
-  "description": "Topics related to Content Management Systems."
+  "description": ""
 }
 ---
 
