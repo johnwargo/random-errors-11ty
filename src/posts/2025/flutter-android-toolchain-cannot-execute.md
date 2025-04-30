@@ -25,7 +25,7 @@ Doctor summary (to see all details, run flutter doctor -v):
 [✓] Network resources
 ```
 
-To check my system to see what version of Java the system sees, I execute the following command:
+To check my system to see what version of Java the system sees, I use the following command:
 
 ```shell
 where java
@@ -37,7 +37,7 @@ which gives me:
 C:\Program Files\Microsoft\jdk-17.0.15.6-hotspot\bin\java.exe
 ```
 
-In this case, my Flutter toolchain is configured for a version of Java that's no longer on the system, it's been upgraded. Checking the Flutter conifig:
+In this case, my Flutter toolchain is configured for a version of Java that's no longer on the system, it's been upgraded. Checking the Flutter config:
 
 ```shell
 flutter config --list
