@@ -9,7 +9,7 @@ timestamp: 2025-04-30T00:35:19.833Z
 
 I run Microsoft's Java on my development system and whenever I upgrade Java on my system, it breaks my Flutter toolchain. Here's what it looks like.
 
-When I execute `flutter doctor`, the tool shows an error in my Android toolchain"
+When I execute `flutter doctor`, the tool shows an error in my Android toolchain: 
 
 ```text
 Doctor summary (to see all details, run flutter doctor -v):
