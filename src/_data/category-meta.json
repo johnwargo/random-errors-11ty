@@ -35,6 +35,11 @@
     "description": "Topics related to writing apps using Google App Script (Good Workspace add-ons)."
   },
   {
+    "category": "Hardware",
+    "count": 1,
+    "description": ""
+  },
+  {
     "category": "IoT",
     "count": 9,
     "description": "Topics related to the Internet of Things (IoT)."
