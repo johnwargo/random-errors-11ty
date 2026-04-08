@@ -1,4 +1,5 @@
 import { EleventyHtmlBasePlugin } from '@11ty/eleventy';
+import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import { generateCategoryPages } from 'eleventy-generate-category-pages';
 import markdownIt from 'markdown-it';
 import markdownItAttrs from 'markdown-it-attrs';
@@ -8,7 +9,7 @@ import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import pluginStats from 'eleventy-plugin-post-stats';
 
 // local plugins
-import pluginImages from './eleventy.config.images.js';
+// import pluginImages from './eleventy.config.images.js';
 import htmlMinTransform from './src/transforms/html-min.js';
 
 // Create a helpful production flag
@@ -16,11 +17,30 @@ const isProduction = process.env.RUNTIME_ENV === 'production';
 
 export default function(eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-	eleventyConfig.addPlugin(pluginImages, { debugMode: false });
+	// eleventyConfig.addPlugin(pluginImages, { debugMode: false });
+	// eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 	eleventyConfig.addPlugin(pluginDate);
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(syntaxHighlight);
 	eleventyConfig.addPlugin(pluginStats);
+
+	// ==========================
+	// image plugin
+	// ==========================
+	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+		// which file extensions to process
+		extensions: 'html',
+		// optional, output image formats
+		formats: ['jpg', 'webp'],
+		// optional, output image widths
+		widths: ['auto', 400, 800, 1024],
+		// optional, attributes assigned on <img> override these values.
+		defaultAttributes: {
+			loading: 'lazy',
+			decoding: 'async',
+			class: 'image-full'
+		}
+	});
 
 	// https://github.com/11ty/eleventy/issues/2301
 	const mdOptions = {
