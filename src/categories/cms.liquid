@@ -6,7 +6,7 @@
     "size": 20,
     "alias": "catposts",
     "reverse": true,
-    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('CMS')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
+    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories && item.data.categories.includes('CMS')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
   },
   "category": "CMS",
   "eleventyComputed": {
