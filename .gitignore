@@ -2,6 +2,7 @@
 node_modules/
 _site/
 px-txt-html/
+src/categories/
 
 # Files
 package-lock.json
